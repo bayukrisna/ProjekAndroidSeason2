@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 
 import java.util.ArrayList;
 
@@ -48,8 +49,19 @@ public class MainActivity extends AppCompatActivity implements AdapterFragment2.
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         tabLayout.setupWithViewPager(vp);
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_drafts_black_24dp);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_insert_chart_black_24dp);
+        tabLayout.getTabAt(2).setIcon(R.drawable.ic_crop_original_black_24dp);
+        tabLayout.getTabAt(3).setIcon(R.drawable.ic_group_black_24dp);
         tabLayout.setOnTabSelectedListener(listener(vp));
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.item_menu, menu);
+
+        return true;
     }
 
     //menambahkan fragment kedalam view pager
@@ -70,7 +82,15 @@ public class MainActivity extends AppCompatActivity implements AdapterFragment2.
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 pager.setCurrentItem(tab.getPosition());
-                setTitle(tab.getText());
+                if (tab.getPosition() == 0) {
+                    setTitle("Fragment 1");
+                } else if (tab.getPosition() == 1) {
+                    setTitle("Fragment 2");
+                } else if (tab.getPosition() == 2) {
+                    setTitle("Fragment 3");
+                } else if (tab.getPosition() == 3) {
+                    setTitle("Fragment 4");
+                }
             }
 
             @Override

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Oerip Bedjoe</string>
     <string name="title_activity_detail">DetailActivity</string>
+    <string name="descr_overflow_button">Ayyyeee</string>
 </resources>
