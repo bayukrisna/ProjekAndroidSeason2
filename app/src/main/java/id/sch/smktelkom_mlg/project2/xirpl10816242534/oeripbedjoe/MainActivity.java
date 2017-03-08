@@ -18,7 +18,6 @@ import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.Adapt
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.AdapterFragment3;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.AdapterFragment4;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.Data;
-import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.DetailActivity;
 
 public class MainActivity extends AppCompatActivity implements AdapterFragment2.IDataAdapter, AdapterFragment1.IDataAdapter, AdapterFragment3.IDataAdapter, AdapterFragment4.IDataAdapter {
 
@@ -108,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements AdapterFragment2.
     //mengatur ketika item di klik (untuk Chord Adapter)
     @Override
     public void doClickFrag1(int pos) {
-        Intent intent = new Intent(this, DetailActivity.class);
+        Intent intent = new Intent(this, ViewActivity.class);
         intent.putExtra(LINK_1, datas1.get(pos));
         intent.putExtra(ID, 1);
         startActivity(intent);
@@ -117,7 +116,7 @@ public class MainActivity extends AppCompatActivity implements AdapterFragment2.
     //mengatur ketika item di klik (untuk Lagu Adapter)
     @Override
     public void doClickFrag2(int pos) {
-        Intent intent = new Intent(this, DetailActivity.class);
+        Intent intent = new Intent(this, ViewActivity.class);
         intent.putExtra(LINK_2, datas2.get(pos));
         intent.putExtra(ID, 2);
         startActivity(intent);
@@ -125,7 +124,7 @@ public class MainActivity extends AppCompatActivity implements AdapterFragment2.
 
     @Override
     public void doClickFrag3(int pos) {
-        Intent intent = new Intent(this, DetailActivity.class);
+        Intent intent = new Intent(this, ViewActivity.class);
         intent.putExtra(LINK_3, datas3.get(pos));
         intent.putExtra(ID, 3);
         startActivity(intent);
@@ -133,7 +132,7 @@ public class MainActivity extends AppCompatActivity implements AdapterFragment2.
 
     @Override
     public void doClickFrag4(int pos) {
-        Intent intent = new Intent(this, DetailActivity.class);
+        Intent intent = new Intent(this, ViewActivity.class);
         intent.putExtra(LINK_4, datas4.get(pos));
         intent.putExtra(ID, 4);
         startActivity(intent);
