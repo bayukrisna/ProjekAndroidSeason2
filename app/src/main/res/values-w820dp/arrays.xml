@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2016 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<resources>
+    <string-array name="places">
+        <item>Maag</item>
+        <item>Masuk Angin</item>
+        <item>Diare</item>
+        <item>Sembelit</item>
+        <item>Muntaber</item>
+        <item>Cacingan (Cacing Kremi)</item>
+    </string-array>
+    <string-array name="place_desc">
+        <item>Maag atau radang lambung atau tukak lambung adalah gejala penyakit yang menyerang
+            lambung dikarenakan terjadi luka atau peradangan pada lambung yang menyebabkan sakit,
+            mulas, dan perih pada perut.
+        </item>
+        <item>Masuk angin adalah suatu "penyakit" yang disebabkan karena berkumpulnya gas yang tidak
+            merata di dalam tubuh. Masuk Angin diyakini menjadi penyakit yang nyata, namun saat ini
+            belum ada bukti medis untuk mendukung klaim ini. Penyakit ini mirip influenza karena
+            gejala dan penyebabnya hampir sama.
+        </item>
+        <item>Diare merupakan kondisi yang ditandai dengan encernya tinja yang dikeluarkan dengan
+            frekuensi buang air besar (BAB) yang lebih sering dibandingkan dengan biasanya. Pada
+            umumnya, diare terjadi akibat konsumsi makanan atau minuman yang terkontaminasi bakteri,
+            virus, atau parasit.
+        </item>
+        <item>Sembelit adalah kondisi di mana seseorang buang air besar kurang dari tiga kali
+            seminggu. Setiap orang memiliki kebiasaan buang air besar yang berbeda. Ada orang yang
+            buang air besar setiap hari, namun ada juga yang setiap dua hari. Namun jika sulit atau
+            jarang buang air besar, berarti Anda mengalami sembelit.
+        </item>
+        <item>Muntaber adalah sebuah kondisi penyakit yang biasa kita juga kenal sebagai muntah
+            berak dan kondisi ini sama sekali tak dapat dianggap enteng. Ketika penyakit ini datang
+            dan dibiarkan begitu saja tanpa segera ditangani, maka efeknya pun dapat menjadi lebih
+            buruk dan berbahaya.
+        </item>
+        <item>Cacing kremi adalah cacing parasit kecil yang menjangkiti usus besar manusia. Parasit
+            bernama latin Enterobius vermicularis ini memiliki fisik berwarna putih dan sekilas
+            terlihat seperti benang putih. Cacing ini bisa terlihat pada sekitar lubang anus atau di
+            tinja penderita.
+        </item>
+    </string-array>
+    <string-array name="place_details">
+        <item>-Sering muntah. \n-Anda menjadi sulit menelan. \n-Mengalami penurunan berat badan. .
+        </item>
+        <item>-Tubuh terasa kedinginan tidak karuan. \n-cegukan. \n-Perut terasa kembung.
+            \n-Menggigil.
+        </item>
+        <item>Gejala diare bermacam-macam. \n\n-Dimulai dari yang hanya merasakan sakit perut
+            singkat dengan tinja yang tidak terlalu encer. \n-Mengalami kram perut dengan tinja yang
+            sangat encer. \n-Pada kasus diare parah, kemungkinan penderitanya juga akan mengalami
+            demam dan kram perut hebat.
+        </item>
+        <item>-Jarang buang air besar atau kurang dari sekali sehari. \n-Sulit buang air besar.
+            \n-Kram otot perut. \n-Perut terasa berat. \n-Sering buang gas atau kentut. \n-Lidah
+            berlendir. \n-Sakit kepala. \n-Kehilangan nafsu makan \n-Sakit pada paha atau betis.
+            \n-Hipertensi atau tekanan darah tinggi. \n-Mual. \n-Vertigo. \n-Jantung berbebar-debar
+            atau palpitasi. \n-Kantuk.
+        </item>
+        <item>-Nyeri perut atau mulas. \n-Mual. \n-Demam. \n-Hilangnya nafsu makan. \n-Dehidrasi.
+        </item>
+        <item>Orang yang terjangkiti cacing kremi seringkali tidak merasakan gejala atau tanda apa
+            pun. Namun, gejala umum yang sering dirasakan penderita adalah rasa gatal di sekitar
+            anus dan vagina pada malam hari. Rasa gatal ini disebabkan oleh aktivitas cacing kremi
+            saat menaruh telur-telurnya.
+        </item>
+    </string-array>
+    <string-array name="place_locations">
+        <item>Ramuan yang sering dimanfaatkan terbuat dari daun jambu biji. \n\n-Siapkan 9 lembar
+            daun jambu biji \n-Rebus dan campur dengan 1,5 liter air. \n-Air rebusan tadi bisa anda
+            minum 3 kali sehari. \n-Maag akan berangsur menghilang seiring asalkan anda menjalani
+            terapi rebusan daun biji ini secara teratur dan konsisten.\n\n
+        </item>
+        <item>-Parut dulu jahe secukupnya. \n-Rebus sampai mendidih dan saring. \n-Agar wedang jahe
+            tak terlalu pedas, kamu bisa menambahkan air perasan lemon dan gula batu. \n\nJika ingin
+            lebih nikmat lagi, konsumsi wedang jahe bersama dengan pisang rebus atau camilan
+            kesukaanmu lainnya.\n\n
+        </item>
+        <item>Buah jambu biji ini juga dapat mengatasi Diare dan tidak hanya buahnya saja Daunnya
+            pun dapat juga mengatasi diare. \n\n-Cara mengkonsumsinya dengan memakan pucuk daun
+            jambu biji dan dicampur dengan garam dapur. \n-Secara langsung Obat tradisional ini akan
+            cepat menghentikan terjadinya sakit perut atau diare.\n\n
+        </item>
+        <item>-Setengah genggam daun keji beling segar dicuci hingga bersih. \n-Kemudian rebus
+            dengan dua gelas air sampai tersisa satu gelas. \n-Saring dan minum.\n\n
+        </item>
+        <item>Salah satu cara cepat untuk mengobati penyakit muntaber, dapat menggunakan daun
+            sembung. \n\n-Caranya, rebus 5 lembar pucuk daun sembung bersama 2 gelas air. \n-Biarkan
+            airnya mendidih dan berkurang segelas. \n-Minum ramuan tradisional ini, 2 kali dalam
+            sehari.\n\n
+        </item>
+        <item>Kulit mangga yang biasanya dibuang begitu saja ternyata dapat dijadikan sebagai obat
+            cacing. \n\nDaya antelmintik pada kulit mangga akan membantu mencegah penyakit cacing
+            terutama untuk anak-anak, antelmintik juga sangat ampuh untuk membunuh kuman dan bakteri
+            yang ada di dalam perut.\n\n-Selama kurang lebih 15 menit rebuslah kulit mangga, hal ini
+            akan menjadikan zat antelmintik di kulit mangga keluar. \n-Ambil dan taruhlah dalam
+            gelas air rebusan kulit mangga tersebut kemudian minumlah dengan penuh semangat.
+            \n-Ternyata rebusan kulit mangga ini cukup ampuh membunuh bakteri jahat di dalam perut
+            dan juga larva cacing. \n\n
+        </item>
+    </string-array>
+    <array name="places_picture">
+        <item>@drawable/tulang</item>
+        <item>@drawable/tulang</item>
+        <item>@drawable/tulang</item>
+        <item>@drawable/tulang</item>
+        <item>@drawable/tulang</item>
+        <item>@drawable/tulang</item>
+    </array>
+
+
+    <string-array name="judulkepala">
+        <item>Migrain</item>
+        <item>Vertigo</item>
+        <item>Pusing atau Pening</item>
+        <item>Sariawan</item>
+        <item>Sakit Gigi</item>
+        <item>Jerawat</item>
+    </string-array>
+    <string-array name="definisikepala">
+        <item>Migrain adalah nyeri kepala sedang hingga parah yang terasa berdenyut yang umumnya
+            hanya mengenai sebelah sisi kepala saja. Penyakit ini lebih sering diidap wanita
+            dibandingkan pria.
+        </item>
+        <item>Penyakit Vertigo merupakan keadaan dimana seseorang merasa dirinya atau ruangan
+            disekitarnya seolah berputar. Perasaan ini disebabkan oleh virus, penurunan aliran darah
+            ke otak, trauma kepala, iskemi sementara karena obat-obatan dan alkohol, migrain, dan
+            beberapa kasusu epilepsi
+        </item>
+        <item>Pusing adalah istilah yang digunakan untuk menggambarkan rasa lemas atau lengah hingga
+            rasa lemah atau goyah. Penyabab utamanya adalah stress dan kecemasan.
+        </item>
+        <item>Sariawan atau dalam bahasa kedokteran disebut dengan stomatitis merupakan radang yang
+            terjadi pada mukosa (pipi bagian dalam) mulut, biasanya berupa bercak putih kekuningan.
+            Bercak itu dapat berupa bercak tunggal maupun berkelompok.
+        </item>
+        <item>Sakit Gigi adalah rasa nyeri yang dirasa disekitar gigi, disebabkan oleh berbagai
+            macam masalah disekitar gigi dan rahang. Contoh kecil seperti penyakit rahang, gigi
+            berlubang atau karies gigi.
+        </item>
+        <item>Jerawat adalah masalah kulit yang ditandai dengan munculnya bintik-bintik pada
+            beberapa bagian tubuh, seperti wajah, leher, punggung, dan dada. Bintik-bintik tersebut
+            dapat berkisar mulai dari yang ringan, seperti komedo hitam dan komedo putih, hingga
+            bintik-bintik parah yang berisi nanah dan kista.
+        </item>
+    </string-array>
+    <string-array name="gejalakepala">
+        <item>-Sakit kepala sangat parah yang terjadi secara tiba-tiba dan belum pernah dirasakan
+            sebelumnya.
+            \n-Lengan dan/atau satu sisi wajah atau seluruh wajah, terasa lemas atau lumpuh.
+            \n-Sakit kepala yang bersamaan dengan demam, leher kaku, kebingungan, kejang,
+            penglihatan ganda, dan ruam kulit.
+            \n-Bicara dan gerak bibir yang sulit dimengerti.
+        </item>
+        <item>-Kehilangan keseimbangan.
+            \n-Mengalami kesulitan berdiri atau berjalan.
+            \n-Mual.
+            \n-Muntah.
+            \n-Berkeringat.
+            \n-Kadang disertai nistagmus (gerakan mata yang tidak normal) dan pusing.
+        </item>
+        <item>-Sensasi seperti mau pingsan.
+            \n-Sensasi limbung atau kehilangan keseimbangan.
+            \n-Vertigo, yaitu sekeliling terasa berputar.
+        </item>
+        <item>-Luka berwarna putih yang biasa muncul di lidah atau dinding mulut.
+            \n-Sensasi terbakar pada lidah.
+            \n-Rasa sakit saat menelan.
+            \n-Rasa tidak nyaman di dalam mulut.
+        </item>
+        <item>-Bengkak di sekitar gigi yang terinfeksi.
+            \n-Pusing.
+            \n-Rasa dan bau busuk dari gigi yang terinfeksi.
+            \n-Demam.
+        </item>
+        <item>Timbulnya benjolan yang berwarna kemerahan atau kuning yang mengandung nanah. \n\nCiri
+            - ciri jerawat juga bisa dikelompokkan menjadi dua kategori yaitu jerawat yang meradang
+            dan tidak meradang. \n\n
+            A. Jerawat Meradang \n
+            Jerawat yang meradang ciri-cirinya berwarna kemerah-merahan dan terjadi peradangan serta
+            pembengkakan, juga gejala adanya iritasi pada kulit. \n\n
+            B. Jerawat Tidak Meradang \n
+            Kalau jerawat yang termasuk tipe ini secara kasat mata kurang terlihat, namun
+            menyebabkan kulit anda terasa kasar. Tapi walau tidak terlihat bukan berarti anda
+            membiarkan begitu saja karena jerawat yang tidak meradang bisa menjadi jerawat yang
+            meradang juga pada akhirnya.
+        </item>
+    </string-array>
+    <string-array name="obatkepala">
+        <item>-Buatlah jus lemon dari 1 buah lemon. \n-Lalu dicampur ke dalam gelas bersama air
+            putih.\n-Kita bisa gunakan kulitnya untuk dilumat lalu ditempel di dahi\n\n
+        </item>
+        <item>Almond kaya akan asam lemak esensial, vitamin dan mineral. Nutrisi di dalamnya juga
+            membantu tubuh untuk mengatasi serangan vertigo. \n\nTidak hanya itu, almond juga
+            berkhasiat untuk menyembuhkan kelelahan dan sakit kepala yang terjadi karena vertigo.
+            \n\nAnda dapat mencampur bubuk almond dalam susu panas dan diminum di pagi hari.\n\n
+        </item>
+        <item>Anda bisa menggunakan ramuan jeruk nipis. \n\n-Bahan-bahannya adalah sediakan daun
+            jeruk nipis setengah lembar serta satu buah jeruk nipis. \n-Cara membuatnya yaitu daun
+            jeruk nipis tersebut ditumbuk sampai halus. \n-Lalu masukkan kedalam wadah. \n-Setelah
+            itu, dicampur dengan perasan air jeruk nipis. \n-Aduk merata. \n-Gunakan sebagai obat
+            gosok yaitu caranya usapkan pada bagian bahu, tengkuk serta pelipis.\n\n
+        </item>
+        <item>Percaya atau tidak, air kelapa dikenal dengan pendinginannya sehingga dapat
+            menenangkan sistem pencernaan. \n\nSelain baik untuk mengatasi dehidrasi, air kelapa
+            juga baik untuk mengobati sariawan.\n\n
+        </item>
+        <item>Disarankan menggunakan minyak cengkeh. \n\n-Adapun cara penggunaannya adalah dengan
+            cara menuang minyak secukupnya pada kapas. \n-Lalu tempelkan pada bagian yang sakit.
+            \n-Usahakan dijepit atau digigit agar tak lepas. \n-Biarkan dalam waktu lama dan ganti
+            bisa sudah terasa kurang efeknya.\n\n
+        </item>
+        <item>Cara Menghilangkan Jerawat Menggunakan Bawang Putih \n\n
+            -Ambil bawang putih dan potong 1 siung bawang putih menjadi 2 bagian \n
+            -Gosok-gosokkan bawang putih yang telah dipotong ke jerawat dan biarkan selama 5-10
+            menit \n
+            -Cucilah wajah menggunakan air bersih \n
+            -Lakukan ini secara rutin hingga mendapatkan hasil yang maksimal\n\n
+        </item>
+    </string-array>
+    <array name="gambarkepala">
+        <item>@drawable/tulang</item>
+        <item>@drawable/tulang</item>
+        <item>@drawable/tulang</item>
+        <item>@drawable/tulang</item>
+        <item>@drawable/tulang</item>
+        <item>@drawable/tulang</item>
+    </array>
+
+
+    <string-array name="judultangan">
+        <item>Gatal - Gatal</item>
+        <item>Luka Terbuka</item>
+        <item>Rematik</item>
+        <item>Koilonikia (Kuku sendok)</item>
+        <item>Kulit Kering</item>
+        <item>Kram</item>
+    </string-array>
+    <string-array name="definisitangan">
+        <item>Gatal adalah rasa tidak nyaman pada kulit yang memicu penderitanya untuk melakukan
+            garukan. Di dalam dunia medis, gatal disebut pruritus. Gatal dapat mengenai salah satu
+            tempat saja, dapat juga mengenai seluruh tubuh. Demikian pula dengan kelainan kulit yang
+            menyertainya.
+        </item>
+        <item>Luka terbuka merupakan luka dimana kulit atau jaringan selaput lendir rusak. Cedera
+            jaringan lunak disertai kerusakan / terputusnya jaringan kulit yaitu rusaknya kulit dan
+            bisa disertai jaringan di bawah kulit.
+        </item>
+        <item>Rematik adalah penyakit-penyakit yang menyebabkan nyeri atau pegal-pegal pada anggota
+            gerak terutama pada sendi. Ada banyak penyakit yang termasuk dalam penyakit rematik
+            seperti Rheumatoid arthritis (RA), Osteoarthritis (OA), Lupus, dan lain-lain. Gejala
+            rematik akan berbeda tergantung penyakit mana yang menyerang.
+        </item>
+        <item>Koilonikia adalah penyakit kuku yang terjadi akibat anemia atau kekurangan zat besi.
+        </item>
+        <item>Kulit kering adalah kondisi umum yang dialami kulit di mana terdapat kekurangan cairan
+            di lapisan terluar kulit. Bagian tubuh yang terbuka, seperti lengan, tangan, dan kaki
+            adalah area yang paling rentan mengalami gangguan ini. Dalam dunia medis, kulit kering
+            biasa disebut dengan xerosis atau xeroderma.
+        </item>
+        <item>Kram adalah pengerutan pada otot, yang muncul secara tiba-tiba dan menyebabkan nyeri.
+            Kram bisa sembuh dengan sendirinya selama beberapa detik, menit, atau jam, tergantung
+            dari kontraksi tersebut, dan kram dapat terjadi pada otot rangka atau otot polos.
+        </item>
+    </string-array>
+    <string-array name="gejalatangan">
+        <item>-Kulit terasa tidak nyaman. \n-Warna kulit menjadi kemerahan. \n-Kadang disertai
+            bentolan kecil - kecil. \n-Kulit terasa kering dan lebih sensitif.
+        </item>
+        <item>-Keluar darah.
+            \n-Jaringan kulit luar robek akibat tergores.
+            \n-Timbul rasa sakit dan perih.
+            \n-Terkadang juga akan mengakibatkan kepala pusing.
+        </item>
+        <item>-Kekauan sendi di pagi hari. \n-Pembengkakan dan nyeri sendi. \n-Adanya benjolan atau
+            nodul. \n-Penumpukan cairan.
+        </item>
+        <item>Kuku menjadi tipis dan datar atau cekung.
+        </item>
+        <item>-Kulit bersisik dan kasar \n-Mudah tergores atau tergesek benda \n-Akan menimbulkan
+            bekas jika tergesek ssesuatu \n
+        </item>
+        <item>-Tangan terasa lemah untuk digerakan. \n-Mati rasa. \n-Tangan terasa kaku dan terasa
+            sakit. \n-Terkadang juga menyebabkan perubahan warna kulit menjadi kemerahan.
+        </item>
+    </string-array>
+    <string-array name="obattangan">
+        <item>Lidah Buaya Dipercaya Dapat Mengatasi Gatal Di Badan. Kandungan aloe vera yang
+            terdapat dalam gell lidah buaya mampu untuk menghilangkan gatal di badan. \n\n-Tidak
+            banyak cara untuk menggunakan gell lidah buaya sebagai obat gatal Anda. \n-Cukup Anda
+            ambil lidah buaya dan potong menjadi dua. \n-Lalu ambil gell lidah buaya dan oleskan
+            terhadap badan yang terasa gatal. \n-Memang untuk pengobatan yang sebentar tidak akan
+            langsung terasa efeknya. \n-Oleh karena itu lakukan hal ini sesering mungkin demi untuk
+            proses penyembuhan lebih cepat lagi.\n\n
+        </item>
+        <item>Minyak kelapa memiliki sejuta manfaat, juga dapat menyembuhkan luka dengan efektif.
+            Minyak nabati ini memiliki sifat antibakteri dan antijamur yang menakjubkan dan bahkan
+            dapat mencegah luka jaringan parut. \n\n-Oleskan minyak kelapa pada luka untuk membantu
+            mempercepat penyebuhannya 2 atau 3 kali sehari.\n\n
+        </item>
+        <item>Cara pengobatan penyakit rematik dengan ramuan herbal sangat mudah untuk dibuat dan
+            juga tak kalah khasiatnya untuk mengatasi rematik adalah dengan menggunakan daun
+            belimbing wuluh muda. \n\n-Cara membuatnya cukup sediakan sebanyak 100 gram daun
+            belimbing wuluh muda,cengkeh sebanyak 10 biji, merica sebanyak 15 biji, serta cuka
+            secukupnya. \n-Kemudian giling hingga halus semua bahan-bahan tersebut. \n-Ramuan ini
+            juga hanya obat untuk pemakaian luar, cara menggunakannya cukup oleskan pada bagian yang
+            sakit sebanyak yang diperlukan.\n\n
+        </item>
+        <item>-Menggunakan minyak lemon esensial untuk membersihkan kuku. \n-Rendam dengan air
+            hangat dan gosok dengan sikat halus. \n-Hindari memakai kuteks berwarna terang.
+            \n-Istirahatkan kuku Anda dari pemakaian kuteks selama beberapa bulan.\n\n
+        </item>
+        <item>Kita dapat menggunakan mentimun \n\n
+            Selain untuk wajah, ternyata timun juga dapat bermanfaat untuk kulit kaki dan tangan.
+            Pertama kupas dan cuci timun hingga bersih. Lalu haluskan menggunakan blender atau
+            parut. Setelah itu oleskan pada bagian tubuh yang diinginkan.\n\n
+        </item>
+        <item>Kulit Manggis kaya akan kandungan vitamin B1, B2 dan C, serta kalsium, potassium, dan
+            zat besi yang baik untuk tubuh dan tulang.
+            \n\n
+            Kandungan didalam kulit manggis dipercaya mampu melancarkan peredaran darah keseluruh
+            tubuh, termasuk pada kaki, betis, atau tangan, sehingga mampu mencegah dan mengatasi
+            terjadinya kram berulang.
+            \n\n
+            Selain itu, kulit manggis ini mengandung senyawa Xanthone yang kaya akan antioksidan
+            tinggi yang mampu menangkal radikal bebas, mampu memperbaiki sel-sel tubuh yang rusak
+            dan mampu menetralisir racun didalam tubuh.\n\n
+        </item>
+    </string-array>
+    <array name="gambartangan">
+        <item>@drawable/tulang</item>
+        <item>@drawable/tulang</item>
+        <item>@drawable/tulang</item>
+        <item>@drawable/tulang</item>
+        <item>@drawable/tulang</item>
+        <item>@drawable/tulang</item>
+    </array>
+
+
+    <string-array name="judulkaki">
+        <item>Kaki Terkilir</item>
+        <item>Rematik</item>
+        <item>Kesemutan</item>
+        <item>Luka Terbuka</item>
+        <item>Gatal - Gatal</item>
+        <item>Kapalan</item>
+    </string-array>
+    <string-array name="definisikaki">
+        <item>Keseleo atau terkilir adalah cedera berupa peregangan dan atau robekan pada otot,
+            tendon (jaringan yang menghubungkan otot dengan tulang) atau ligamen (jaringan yang
+            menghubungkan tulang dengan tulang lainnya). Biasanya hal ini terjadi saat aktifitas
+            fisik yang berat atau saat berolahraga
+        </item>
+        <item>Rematik adalah penyakit-penyakit yang menyebabkan nyeri atau pegal-pegal pada anggota
+            gerak terutama pada sendi. Ada banyak penyakit yang termasuk dalam penyakit rematik
+            seperti Rheumatoid arthritis (RA), Osteoarthritis (OA), Lupus, dan lain-lain. Gejala
+            rematik akan berbeda tergantung penyakit mana yang menyerang.
+        </item>
+        <item>Kesemutan sementara terjadi ketika ada anggota tubuh yang mengalami tekanan dalam
+            waktu lama. Hal ini membuat pasokan darah ke saraf di daerah itu menjadi terhambat. Anda
+            bisa merasakan kesemutan pada kaki setelah duduk bersila atau memakai sepatu terlalu
+            kecil
+        </item>
+        <item>Luka terbuka merupakan luka dimana kulit atau jaringan selaput lendir rusak. Cedera
+            jaringan lunak disertai kerusakan / terputusnya jaringan kulit yaitu rusaknya kulit dan
+            bisa disertai jaringan di bawah kulit.
+        </item>
+        <item>Gatal adalah rasa tidak nyaman pada kulit yang memicu penderitanya untuk melakukan
+            garukan. Di dalam dunia medis, gatal disebut pruritus. Gatal dapat mengenai salah satu
+            tempat saja, dapat juga mengenai seluruh tubuh. Demikian pula dengan kelainan kulit yang
+            menyertainya.
+        </item>
+        <item>Kapalan atau callus biasanya muncul pada kaki, tumit, tangan, atau jari, dan bisa
+            menyebabkan rasa tidak nyaman dan nyeri saat berjalan atau beraktivitas. Kapalan
+            merupakan reaksi alami tubuh untuk melindungi bagian kulit..
+        </item>
+    </string-array>
+    <string-array name="gejalakaki">
+        <item>-Nyeri sendi. \n-Pembengkakan. \n-Kekakuan sendi. \n-Perubahan warna kulit
+            merah-kebiruan.
+        </item>
+        <item>-Kekauan sendi di pagi hari. \n-Pembengkakan dan nyeri sendi. \n-Adanya benjolan atau
+            nodul. \n-Penumpukan cairan.
+        </item>
+        <item>-Kaki sulit digerakan. \n-Kaki serasa seperti tersengat listrik ringan. \n-Kaki
+            mendapat sensasi seperti dirumuti oleh banyak semut.
+        </item>
+        <item>-Keluar darah. \n-Jaringan kulit luar robek akibat tergores. \n-Timbul rasa sakit dan
+            perih. \n-Terkadang juga akan mengakibatkan kepala pusing.
+        </item>
+        <item>-Kulit terasa tidak nyaman. \n-Warna kulit menjadi kemerahan. \n-Kadang disertai
+            bentolan kecil - kecil. \n-Kulit terasa kering dan lebih sensitif.
+        </item>
+        <item>-Kulit berubah menjadi kering atau pecah - pecah. \n-Rasa nyeri atau sakit saat
+            disentuh pada bagian bawah kulit. \n-Ada sebagian kulit yang terasa kasar dan menebal.
+            \n-Timbulnya benjolan yang mengeras pada kulit.
+        </item>
+    </string-array>
+    <string-array name="obatkaki">
+        <item>-Lumuri dengan parutan jahe. \n-Jahe sangat efektif untuk mengurangi rasa sakit karena
+            keseleo atau terkilir karena jahe memiliki sifat hangat. \n-Karena itu jahe dapat
+            mengurangi pembengkakan yang terjadi akibat keseleo atau terkilir.\n\n
+        </item>
+        <item>Cara pengobatan penyakit rematik dengan ramuan herbal sangat mudah untuk dibuat dan
+            juga tak kalah khasiatnya untuk mengatasi rematik adalah dengan menggunakan daun
+            belimbing wuluh muda. \n\n-Cara membuatnya cukup sediakan sebanyak 100 gram daun
+            belimbing wuluh muda, cengkeh sebanyak 10 biji, merica sebanyak 15 biji, serta cuka
+            secukupnya. \n-Kemudian giling hingga halus semua bahan-bahan tersebut. \n-Ramuan ini
+            juga hanya obat untuk pemakaian luar, cara menggunakannya cukup oleskan pada bagian yang
+            sakit sebanyak yang diperlukan.\n\n
+        </item>
+        <item>-Kita bisa mengatasinya dengan daun sirsak. \n-Caranya, ambil daun sirsak secukupnya.
+            \n-Rebus dalam air kemudian airnya disaring dan bisa diminum. \n-Tidak hanya daunnya,
+            buah sirsak juga efektif membantu mencegah kanker, tumor dan penyakit ganas lainnya.\n\n
+        </item>
+        <item>Minyak kelapa memiliki sejuta manfaat, juga dapat menyembuhkan luka dengan efektif.
+            Minyak nabati ini memiliki sifat antibakteri dan antijamur yang menakjubkan dan bahkan
+            dapat mencegah luka jaringan parut. \n\n-Oleskan minyak kelapa pada luka untuk membantu
+            mempercepat penyebuhannya 2 atau 3 kali sehari.\n
+        </item>
+        <item>Lidah Buaya Dipercaya Dapat Mengatasi Gatal Di Badan. Kandungan aloe vera yang
+            terdapat dalam gell lidah buaya mampu untuk menghilangkan gatal di badan. Tidak banyak
+            cara untuk menggunakan gell lidah buaya sebagai obat gatal Anda. \n\n-Cukup Anda ambil
+            lidah buaya dan potong menjadi dua. \n-Lalu ambil gell lidah buaya dan oleskan terhadap
+            badan yang terasa gatal. \n-Memang untuk pengobatan yang sebentar tidak akan langsung
+            terasa efeknya. \n-Oleh karena itu lakukan hal ini sesering mungkin demi untuk proses
+            penyembuhan lebih cepat lagi.\n\n
+        </item>
+        <item>-Kulit nanas membantu dalam proses pengobatan kapalan. \n-Untuk wanita maupun pria,
+            bisa mencoba cara yang satu ini. \n-Pertama-tama, rendamlah kaki atau tangan Anda pada
+            baskom berisikan air hangat seperti biasanya selama 15 – 30 menit. \n-Lalu tempelkan
+            bagian dalam kulit nanas pada kulit yang kapalan. \n-Rekatkan juga dengan plester luka
+            atau dibalut dengan kain. \n-Lakukan ini sebelum tidur, lalu pagi harinya dilepas dan
+            ulangi lagi selama minimal 4 hari.\n\n
+        </item>
+    </string-array>
+    <array name="gambarkaki">
+        <item>@drawable/tulang</item>
+        <item>@drawable/tulang</item>
+        <item>@drawable/tulang</item>
+        <item>@drawable/tulang</item>
+        <item>@drawable/tulang</item>
+        <item>@drawable/tulang</item>
+    </array>
+</resources>
