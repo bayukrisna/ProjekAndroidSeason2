@@ -16,7 +16,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.Fragment3;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.FragmentView1;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.FragmentView2;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.FragmentView3;
@@ -66,7 +65,7 @@ public class ViewActivity extends AppCompatActivity {
         });
 
         int id = getIntent().getIntExtra(MainActivity.ID, 0);
-        Integer anggota = getIntent().getIntExtra(Fragment3.ANGT, 0);
+
 
         //jika id nya 1 maka proses yang dijalankan
         if (id == 1) {

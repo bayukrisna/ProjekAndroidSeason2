@@ -38,7 +38,7 @@ public class Fragment2 extends Fragment {
 
 
         RecyclerView rvChord = (RecyclerView) getView().findViewById(R.id.mRecyclerFrag2);
-        rvChord.setLayoutManager(new GridLayoutManager(this.getActivity(), 3));
+        rvChord.setLayoutManager(new GridLayoutManager(this.getActivity(), 2));
         mIDataAdapterFrag2 = new AdapterFragment2(this.getActivity(), getFrag2List());
         rvChord.setAdapter(mIDataAdapterFrag2);
 

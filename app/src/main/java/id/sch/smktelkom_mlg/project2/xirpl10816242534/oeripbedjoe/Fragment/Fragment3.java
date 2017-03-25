@@ -14,6 +14,7 @@ import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.MainActivity;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.R;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.AdapterFragment3;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.Data;
+import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.TulangActivity;
 
 /**
  * Created by user on 17/11/2016.
@@ -48,10 +49,38 @@ public class Fragment3 extends Fragment {
                 hasilIntent(1);
             }
         });
+
+        getView().findViewById(R.id.hand).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hasilIntent(2);
+            }
+        });
+
+        getView().findViewById(R.id.body).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hasilIntent(3);
+            }
+        });
+
+        getView().findViewById(R.id.hand2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hasilIntent(4);
+            }
+        });
+
+        getView().findViewById(R.id.leg).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hasilIntent(5);
+            }
+        });
     }
 
     private void hasilIntent(int i) {
-        Intent intent = new Intent(getActivity().getApplication(), Fragment4.class);
+        Intent intent = new Intent(getActivity().getApplication(), TulangActivity.class);
         intent.putExtra(ANGT, i);
 
         startActivity(intent);

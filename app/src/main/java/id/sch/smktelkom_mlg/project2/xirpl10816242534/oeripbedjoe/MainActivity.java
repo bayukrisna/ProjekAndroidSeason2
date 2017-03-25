@@ -45,13 +45,19 @@ public class MainActivity extends AppCompatActivity implements AdapterFragment2.
         ViewPager vp = (ViewPager) findViewById(R.id.mViewPager);
         this.addPages(vp);
 
+        setTitle("Penyakit Ringan");
+
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         tabLayout.setupWithViewPager(vp);
-        tabLayout.getTabAt(0).setIcon(R.drawable.ic_drafts_black_24dp);
-        tabLayout.getTabAt(1).setIcon(R.drawable.ic_insert_chart_black_24dp);
-        tabLayout.getTabAt(2).setIcon(R.drawable.ic_crop_original_black_24dp);
-        tabLayout.getTabAt(3).setIcon(R.drawable.ic_group_black_24dp);
+        //tabLayout.getTabAt(0).setIcon(R.drawable.ic_drafts_black_24dp);
+        //tabLayout.getTabAt(1).setIcon(R.drawable.ic_insert_chart_black_24dp);
+        //tabLayout.getTabAt(2).setIcon(R.drawable.ic_crop_original_black_24dp);
+        //tabLayout.getTabAt(3).setIcon(R.drawable.ic_group_black_24dp);
+        tabLayout.getTabAt(0).setIcon(R.drawable.icon_ringan);
+        tabLayout.getTabAt(1).setIcon(R.drawable.icon_berat);
+        tabLayout.getTabAt(2).setIcon(R.drawable.icon_tulang);
+        tabLayout.getTabAt(3).setIcon(R.drawable.icon_kalori);
         tabLayout.setOnTabSelectedListener(listener(vp));
 
     }
@@ -81,14 +87,16 @@ public class MainActivity extends AppCompatActivity implements AdapterFragment2.
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 pager.setCurrentItem(tab.getPosition());
+
+
                 if (tab.getPosition() == 0) {
-                    setTitle("Fragment 1");
+                    setTitle("Penyakit Ringan");
                 } else if (tab.getPosition() == 1) {
-                    setTitle("Fragment 2");
+                    setTitle("Penyakit Berat");
                 } else if (tab.getPosition() == 2) {
-                    setTitle("Fragment 3");
+                    setTitle("Penyakit Tulang");
                 } else if (tab.getPosition() == 3) {
-                    setTitle("Fragment 4");
+                    setTitle("Kalori");
                 }
             }
 
@@ -124,7 +132,7 @@ public class MainActivity extends AppCompatActivity implements AdapterFragment2.
 
     @Override
     public void doClickFrag3(int pos) {
-        Intent intent = new Intent(this, ViewActivity.class);
+        Intent intent = new Intent(this, TulangActivity.class);
         intent.putExtra(LINK_3, datas3.get(pos));
         intent.putExtra(ID, 3);
         startActivity(intent);

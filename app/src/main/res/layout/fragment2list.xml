@@ -4,25 +4,25 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="?android:attr/selectableItemBackground"
-    android:padding="4dp">
+    android:padding="8dp">
 
     <ImageView
         android:id="@+id/imageViewFrag2"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="160dp"
         android:scaleType="centerCrop"
         tools:src="@drawable/kirito" />
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="160dp"
         android:alpha="0.3"
         android:background="#424242" />
 
     <TextView
         android:id="@+id/textViewFrag2"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="160dp"
         android:gravity="center"
         android:text="Judul"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
