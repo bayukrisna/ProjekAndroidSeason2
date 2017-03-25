@@ -8,4 +8,33 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">LIFE WITH TOGA</string>
+    <string name="slide_1_desc">Hi semua ! Kini telah hadir aplikasi inovasi kesehatan terbaru yang
+        membantu anda mengolah tanaman di sekitar menjadi ramuan tradisional !
+    </string>
+
+    <string name="slide_2_title">Serve Your Own Recipes</string>
+    <string name="slide_2_desc">Sekarang waktunya anda sendiri yang menciptakan ramuan kesehatan
+        untuk diri anda sendiri!
+    </string>
+
+    <string name="slide_3_title">Make Body Healthier</string>
+    <string name="slide_3_desc">Toga dapat membuat tubuh anda lebih bugar dan pastinya tanpa efek
+        samping obat kimia!
+    </string>
+
+    <string name="slide_4_title">Save People Around You</string>
+    <string name="slide_4_desc">Bantulah orang sakit di sekitarmu dengan ramuan yang anda buat
+        sendiri!
+    </string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome
+        slider -> clear data
+    </string>
+    <string name="play_again">Play Again</string>
 </resources>
