@@ -14,7 +14,10 @@ import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.Data;
 public class TulangActivity extends AppCompatActivity {
 
     AdapterTulang mAdapterTulang;
-    ArrayList<Data> datasTulang = getTulangList();
+    ArrayList<Data> datasHead = getHeadList();
+    ArrayList<Data> datasHand = getHandList();
+    ArrayList<Data> datasBody = getBodyList();
+    ArrayList<Data> datasFoot = getFootList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,50 +26,70 @@ public class TulangActivity extends AppCompatActivity {
 
         RecyclerView rvChord = (RecyclerView) findViewById(R.id.mRecyclerTulang);
         rvChord.setLayoutManager(new LinearLayoutManager(this));
-        mAdapterTulang = new AdapterTulang(this, datasTulang);
-        rvChord.setAdapter(mAdapterTulang);
 
         Integer anggota = getIntent().getIntExtra(Fragment3.ANGT, 0);
+
+        if (anggota == 1) {
+            mAdapterTulang = new AdapterTulang(this, datasHead);
+        } else if (anggota == 2 || anggota == 4) {
+            mAdapterTulang = new AdapterTulang(this, datasHand);
+        } else if (anggota == 3) {
+            mAdapterTulang = new AdapterTulang(this, datasBody);
+        } else if (anggota == 5) {
+            mAdapterTulang = new AdapterTulang(this, datasFoot);
+        }
+
+        rvChord.setAdapter(mAdapterTulang);
+
+
     }
 
-    public ArrayList<Data> getTulangList() {
-        ArrayList<Data> datas = new ArrayList<>();
-        Data data = new Data("Fragment 1", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Judul Penyakit", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Judul Penyakit", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Judul Penyakit", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Judul Penyakit", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
+    //Mengisikan Data
+    public ArrayList<Data> getHeadList() {
+        ArrayList<Data> datas3 = new ArrayList<>();
+        Data data = new Data("Kepala", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
+        datas3.add(data);
+        data = new Data("Kepala", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
+        datas3.add(data);
+        data = new Data("Kepala", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
+        datas3.add(data);
 
+        return datas3;
+    }
 
-        return datas;
+    public ArrayList<Data> getHandList() {
+        ArrayList<Data> datas3 = new ArrayList<>();
+        Data data = new Data("Tangan", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
+        datas3.add(data);
+        data = new Data("Tangan", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
+        datas3.add(data);
+        data = new Data("Tangan", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
+        datas3.add(data);
+
+        return datas3;
+    }
+
+    public ArrayList<Data> getBodyList() {
+        ArrayList<Data> datas3 = new ArrayList<>();
+        Data data = new Data("Badan", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
+        datas3.add(data);
+        data = new Data("Badan", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
+        datas3.add(data);
+        data = new Data("Badan", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
+        datas3.add(data);
+
+        return datas3;
+    }
+
+    public ArrayList<Data> getFootList() {
+        ArrayList<Data> datas3 = new ArrayList<>();
+        Data data = new Data("Kaki", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
+        datas3.add(data);
+        data = new Data("Kaki", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
+        datas3.add(data);
+        data = new Data("Kaki", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
+        datas3.add(data);
+
+        return datas3;
     }
 }
