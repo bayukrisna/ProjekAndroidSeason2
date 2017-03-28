@@ -7,12 +7,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.MainActivity;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.R;
-import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.Data;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -40,7 +37,7 @@ public class FragmentView1 extends Fragment {
         int id = getActivity().getIntent().getIntExtra(MainActivity.ID, 0);
 
         if (id == 1) {
-            //mendapatkan intent dari Main Activity dengan Constanta LINK_1
+            /*//mendapatkan intent dari Main Activity dengan Constanta LINK_1
             Data data = (Data) getActivity().getIntent().getSerializableExtra(MainActivity.LINK_1);
             ImageView iv1 = (ImageView) getActivity().findViewById(R.id.imageView1F1);
             TextView tv1 = (TextView) getActivity().findViewById(R.id.textView1F1);
@@ -52,7 +49,7 @@ public class FragmentView1 extends Fragment {
             tv1.setText(data.text1);
             tv2.setText(data.text2);
             iv2.setImageResource(data.img2);
-            tv3.setText(data.text3);
+            tv3.setText(data.text3);*/
         }
     }
 }
