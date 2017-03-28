@@ -13,9 +13,9 @@
     <string name="skip">SKIP</string>
     <string name="start">GOT IT</string>
 
-    <string name="slide_1_title">LIFE WITH TOGA</string>
+    <string name="slide_1_title">Oriep Bedjoe</string>
     <string name="slide_1_desc">Hi semua ! Kini telah hadir aplikasi inovasi kesehatan terbaru yang
-        membantu anda mengolah tanaman di sekitar menjadi ramuan tradisional !
+        membantu anda memberikan pertologan pertama pada peyakit yang diderita !
     </string>
 
     <string name="slide_2_title">Serve Your Own Recipes</string>
@@ -24,13 +24,13 @@
     </string>
 
     <string name="slide_3_title">Make Body Healthier</string>
-    <string name="slide_3_desc">Toga dapat membuat tubuh anda lebih bugar dan pastinya tanpa efek
-        samping obat kimia!
+    <string name="slide_3_desc">Dengan pengetahuan medis dapat membantu anda menjaga kebugaran tubuh dan pastinya
+        terhindar dari obesitas dengan kalkulator ideal!
     </string>
 
     <string name="slide_4_title">Save People Around You</string>
-    <string name="slide_4_desc">Bantulah orang sakit di sekitarmu dengan ramuan yang anda buat
-        sendiri!
+    <string name="slide_4_desc">Bantulah orang sakit di sekitarmu dengan resep yang anda buat
+        dari aplikasi!
     </string>
 
     <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome

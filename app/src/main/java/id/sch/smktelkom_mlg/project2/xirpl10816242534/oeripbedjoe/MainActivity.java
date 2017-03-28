@@ -15,11 +15,9 @@ import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.Fragm
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.Fragment4;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.AdapterFragment1;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.AdapterFragment2;
-import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.AdapterFragment3;
-import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.AdapterFragment4;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.Data;
 
-public class MainActivity extends AppCompatActivity implements AdapterFragment2.IDataAdapter, AdapterFragment1.IDataAdapter, AdapterFragment3.IDataAdapter, AdapterFragment4.IDataAdapter {
+public class MainActivity extends AppCompatActivity implements AdapterFragment2.IDataAdapter, AdapterFragment1.IDataAdapter {
 
     public static final String LINK_1 = "link1";
     public static final String LINK_2 = "link2";
@@ -32,10 +30,6 @@ public class MainActivity extends AppCompatActivity implements AdapterFragment2.
     ArrayList<Data> datas1 = f1list.getFrag1List();
     Fragment2 f2list = new Fragment2();
     ArrayList<Data> datas2 = f2list.getFrag2List();
-    Fragment3 f3list = new Fragment3();
-    ArrayList<Data> datas3 = f3list.getFrag3List();
-    Fragment4 f4list = new Fragment4();
-    ArrayList<Data> datas4 = f4list.getFrag4List();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements AdapterFragment2.
                 } else if (tab.getPosition() == 2) {
                     setTitle("Penyakit Tulang");
                 } else if (tab.getPosition() == 3) {
-                    setTitle("Kalori");
+                    setTitle("Cek Ideal Tubuh");
                 }
             }
 
@@ -129,20 +123,12 @@ public class MainActivity extends AppCompatActivity implements AdapterFragment2.
         intent.putExtra(ID, 2);
         startActivity(intent);
     }
-
+/*
     @Override
     public void doClickFrag3(int pos) {
         Intent intent = new Intent(this, TulangActivity.class);
-        intent.putExtra(LINK_3, datas3.get(pos));
+        intent.putExtra(LINK_3, datasHead.get(pos));
         intent.putExtra(ID, 3);
         startActivity(intent);
-    }
-
-    @Override
-    public void doClickFrag4(int pos) {
-        Intent intent = new Intent(this, ViewActivity.class);
-        intent.putExtra(LINK_4, datas4.get(pos));
-        intent.putExtra(ID, 4);
-        startActivity(intent);
-    }
+    }*/
 }

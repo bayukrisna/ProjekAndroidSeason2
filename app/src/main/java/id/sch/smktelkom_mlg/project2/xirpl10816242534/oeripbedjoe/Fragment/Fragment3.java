@@ -8,12 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.ArrayList;
-
-import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.MainActivity;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.R;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.AdapterFragment3;
-import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.Data;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.TulangActivity;
 
 /**
@@ -31,11 +27,6 @@ public class Fragment3 extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_3, container, false);
         return rootView;
-    }
-
-    public void goToAttract(View v) {
-        Intent intent = new Intent(getActivity().getApplication(), MainActivity.class);
-        startActivity(intent);
     }
 
     //Membuat RecyclerView
@@ -82,37 +73,11 @@ public class Fragment3 extends Fragment {
     private void hasilIntent(int i) {
         Intent intent = new Intent(getActivity().getApplication(), TulangActivity.class);
         intent.putExtra(ANGT, i);
-
         startActivity(intent);
     }
 
 
-    //Mengisikan Data
-    public ArrayList<Data> getFrag3List() {
-        ArrayList<Data> datas3 = new ArrayList<>();
-        Data data = new Data("Fragment 3", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
-        datas3.add(data);
-        data = new Data("Fragment 3", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas3.add(data);
-        data = new Data("Fragment 3", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
-        datas3.add(data);
-        data = new Data("Fragment 3", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas3.add(data);
-        data = new Data("Fragment 3", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
-        datas3.add(data);
-        data = new Data("Fragment 3", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas3.add(data);
-        data = new Data("Fragment 3", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
-        datas3.add(data);
-        data = new Data("Fragment 3", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas3.add(data);
-        data = new Data("Fragment 3", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
-        datas3.add(data);
-        data = new Data("Fragment 3", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas3.add(data);
 
-        return datas3;
-    }
 
     //Memberi Nama Tab
     public String toString() {
