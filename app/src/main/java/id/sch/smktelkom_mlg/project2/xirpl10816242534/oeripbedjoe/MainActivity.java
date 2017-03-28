@@ -54,10 +54,10 @@ public class MainActivity extends AppCompatActivity implements AdapterFragment2.
         //tabLayout.getTabAt(1).setIcon(R.drawable.ic_insert_chart_black_24dp);
         //tabLayout.getTabAt(2).setIcon(R.drawable.ic_crop_original_black_24dp);
         //tabLayout.getTabAt(3).setIcon(R.drawable.ic_group_black_24dp);
-        tabLayout.getTabAt(0).setIcon(R.drawable.icon_ringan);
-        tabLayout.getTabAt(1).setIcon(R.drawable.icon_berat);
-        tabLayout.getTabAt(2).setIcon(R.drawable.icon_tulang);
-        tabLayout.getTabAt(3).setIcon(R.drawable.icon_kalori);
+        tabLayout.getTabAt(0).setIcon(R.drawable.stetoskop);
+        tabLayout.getTabAt(1).setIcon(R.drawable.suntikyaa);
+        tabLayout.getTabAt(2).setIcon(R.drawable.tulangicon);
+        tabLayout.getTabAt(3).setIcon(R.drawable.kalori);
         tabLayout.setOnTabSelectedListener(listener(vp));
 
     }
