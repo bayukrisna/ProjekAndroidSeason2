@@ -55,6 +55,7 @@ public class ViewActivity extends AppCompatActivity {
 
 
         int id = getIntent().getIntExtra(MainActivity.ID, 0);
+        int idTulang = getIntent().getIntExtra(TulangActivity.ID_TULANG, 0);
 
 
         //jika id nya 1 maka proses yang dijalankan
@@ -62,7 +63,17 @@ public class ViewActivity extends AppCompatActivity {
             //mendapatkan intent dari Main Activity dengan Constanta LINK_1
             Data data = (Data) getIntent().getSerializableExtra(MainActivity.LINK_1);
             setTitle(data.text1);
+        } else if (id == 2) {
+            //mendapatkan intent dari Main Activity dengan Constanta LINK_1
+            Data data = (Data) getIntent().getSerializableExtra(MainActivity.LINK_2);
+            setTitle(data.text1);
+        } else if (idTulang == 3) {
+            //mendapatkan intent dari Main Activity dengan Constanta LINK_1
+            Data data = (Data) getIntent().getSerializableExtra(TulangActivity.LINK_TULANG);
+            setTitle(data.text1);
         }
+
+
     }
 
 

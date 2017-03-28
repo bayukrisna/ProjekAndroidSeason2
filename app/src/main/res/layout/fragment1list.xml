@@ -8,26 +8,28 @@
     android:paddingRight="8dp"
     android:paddingTop="8dp">
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary">
 
-        <ImageView
-            android:id="@+id/imageViewFrag1"
+        <TextView
+            android:id="@+id/textViewTitle"
+            style="@style/TextAppearance.AppCompat.Display1"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:scaleType="centerCrop"
-            tools:src="" />
+            android:layout_weight="1"
+            android:background="?colorPrimary"
+            android:gravity="center"
+            android:textColor="?colorAccent"
+            tools:text="A" />
 
         <TextView
             android:id="@+id/textViewFrag11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginLeft="100dp"
             android:layout_marginTop="8dp"
             android:layout_toEndOf="@+id/imageViewFrag1"
             android:layout_toRightOf="@+id/imageViewFrag1"
@@ -40,6 +42,7 @@
             android:id="@+id/textViewFrag12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:layout_alignLeft="@+id/textViewFrag11"
             android:layout_alignStart="@+id/textViewFrag11"
             android:layout_below="@+id/textViewFrag11"

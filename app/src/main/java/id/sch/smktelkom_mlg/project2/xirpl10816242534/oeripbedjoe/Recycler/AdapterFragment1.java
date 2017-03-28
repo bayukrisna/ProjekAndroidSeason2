@@ -5,7 +5,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -40,7 +39,8 @@ public class AdapterFragment1 extends RecyclerView.Adapter<AdapterFragment1.MyVi
         Data data = datas.get(position);
         holder.tvFrag11.setText(data.text1);
         holder.tvFrag12.setText(data.text2);
-        holder.ivFrag1.setImageResource(data.img1);
+        holder.tvTitle.setText(data.text1.substring(0, 1));
+        //holder.ivFrag1.setImageResource(data.img1);
 
     }
 
@@ -57,16 +57,16 @@ public class AdapterFragment1 extends RecyclerView.Adapter<AdapterFragment1.MyVi
 
     //deklarasi dan inisialisasi id dari item list
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        ImageView ivFrag1;
         TextView tvFrag12;
         TextView tvFrag11;
+        TextView tvTitle;
 
         public MyViewHolder(View itemView) {
             super(itemView);
 
             tvFrag12 = (TextView) itemView.findViewById(R.id.textViewFrag11);
-            ivFrag1 = (ImageView) itemView.findViewById(R.id.imageViewFrag1);
             tvFrag11 = (TextView) itemView.findViewById(R.id.textViewFrag12);
+            tvTitle = (TextView) itemView.findViewById(R.id.textViewTitle);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

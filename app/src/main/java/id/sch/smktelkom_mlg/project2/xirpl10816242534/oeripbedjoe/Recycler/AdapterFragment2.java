@@ -5,8 +5,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -38,8 +36,6 @@ public class AdapterFragment2 extends RecyclerView.Adapter<AdapterFragment2.MyVi
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         Data data = datas.get(position);
-        holder.tvFrag2.setText(data.text1);
-        holder.ivFrag2.setImageResource(data.img1);
     }
 
     //mengatur berapa data yang ditampilkan
@@ -55,14 +51,9 @@ public class AdapterFragment2 extends RecyclerView.Adapter<AdapterFragment2.MyVi
 
     //deklarasi dan inisialisasi dari layout
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        ImageView ivFrag2;
-        TextView tvFrag2;
 
         public MyViewHolder(View itemView) {
             super(itemView);
-
-            ivFrag2 = (ImageView) itemView.findViewById(R.id.imageViewFrag2);
-            tvFrag2 = (TextView) itemView.findViewById(R.id.textViewFrag2);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

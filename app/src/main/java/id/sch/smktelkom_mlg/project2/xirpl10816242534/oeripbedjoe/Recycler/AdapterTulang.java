@@ -19,6 +19,7 @@ import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.TulangActivity
 public class AdapterTulang extends RecyclerView.Adapter<AdapterTulang.ViewHolder> {
 
     ArrayList<Data> datas;
+    IDataAdapter mTulangAdapter;
 
     public AdapterTulang(TulangActivity tulangActivity, ArrayList<Data> datas) {
         this.datas = datas;
@@ -44,6 +45,10 @@ public class AdapterTulang extends RecyclerView.Adapter<AdapterTulang.ViewHolder
         return datas.size();
     }
 
+    public interface IDataAdapter {
+        void doClickTulang(int pos);
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView ivFrag1;
         TextView tvFrag12;
@@ -55,6 +60,13 @@ public class AdapterTulang extends RecyclerView.Adapter<AdapterTulang.ViewHolder
             tvFrag12 = (TextView) itemView.findViewById(R.id.textViewFrag11);
             ivFrag1 = (ImageView) itemView.findViewById(R.id.imageViewFrag1);
             tvFrag11 = (TextView) itemView.findViewById(R.id.textViewFrag12);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mTulangAdapter.doClickTulang(getAdapterPosition());
+                }
+            });
         }
     }
 }
