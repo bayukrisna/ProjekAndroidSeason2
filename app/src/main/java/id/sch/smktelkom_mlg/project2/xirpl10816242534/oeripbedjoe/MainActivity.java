@@ -7,7 +7,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.Fragment1;
@@ -16,7 +15,6 @@ import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.Fragm
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.Fragment4;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.AdapterFragment1;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.AdapterFragment2;
-import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.Data;
 
 public class MainActivity extends AppCompatActivity implements AdapterFragment2.IDataAdapter, AdapterFragment1.IDataAdapter {
 
@@ -30,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements AdapterFragment2.
     Fragment1 f1list = new Fragment1();
     List<DataAdapter> datas1 = f1list.getmDataMains();
     Fragment2 f2list = new Fragment2();
-    ArrayList<Data> datas2 = f2list.getFrag2List();
+    List<DataAdapter> datas2 = f2list.getmDataMains();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

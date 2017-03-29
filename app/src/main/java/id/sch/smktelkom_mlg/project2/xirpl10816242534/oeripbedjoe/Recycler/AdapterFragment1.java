@@ -60,6 +60,7 @@ public class AdapterFragment1 extends RecyclerView.Adapter<AdapterFragment1.MyVi
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView tvFrag12;
         TextView tvFrag11;
+
         TextView tvTitle;
 
         public MyViewHolder(View itemView) {

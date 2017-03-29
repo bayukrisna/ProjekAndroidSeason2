@@ -54,7 +54,7 @@ public class Fragment1 extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mFirebaseDatabase = FirebaseDatabase.getInstance();
-        mMessagesDatabaseReference = mFirebaseDatabase.getReference().child("berat");
+        mMessagesDatabaseReference = mFirebaseDatabase.getReference().child("ringan");
 
         mDataMains = new ArrayList<>();
         final RecyclerView mRecycler = (RecyclerView) getView().findViewById(R.id.mRecyclerFrag1);
