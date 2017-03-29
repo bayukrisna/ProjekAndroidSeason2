@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.Fragment1;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.Fragment2;
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements AdapterFragment2.
 
     //mengambil metode untuk pengambilan data
     Fragment1 f1list = new Fragment1();
-    ArrayList<Data> datas1 = f1list.getFrag1List();
+    List<DataAdapter> datas1 = f1list.getmDataMains();
     Fragment2 f2list = new Fragment2();
     ArrayList<Data> datas2 = f2list.getFrag2List();
 

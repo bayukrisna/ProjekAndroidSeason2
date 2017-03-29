@@ -5,15 +5,25 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.ArrayList;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.DataAdapter;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.R;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.AdapterFragment1;
-import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.Data;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * Created by user on 17/11/2016.
@@ -21,7 +31,11 @@ import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.Data;
 
 public class Fragment1 extends Fragment {
 
-    AdapterFragment1 mIDataAdapterFrag1;
+    private FirebaseDatabase mFirebaseDatabase;
+    private DatabaseReference mMessagesDatabaseReference;
+    private ChildEventListener mChildEventListener;
+    private List<DataAdapter> mDataMains;
+    private AdapterFragment1 mAdapterFragment1;
 
     //menjadikan fragment_1 layout yang dimiliki oleh Fragment1.java
     @Nullable
@@ -31,58 +45,63 @@ public class Fragment1 extends Fragment {
         return v;
     }
 
+    public List<DataAdapter> getmDataMains() {
+        return mDataMains;
+    }
+
     //Membuat RecyclerView ketika activity dibuat
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        mFirebaseDatabase = FirebaseDatabase.getInstance();
+        mMessagesDatabaseReference = mFirebaseDatabase.getReference().child("berat");
 
-        RecyclerView rvChord = (RecyclerView) getView().findViewById(R.id.mRecyclerFrag1);
-        rvChord.setLayoutManager(new LinearLayoutManager(this.getActivity()));
-        mIDataAdapterFrag1 = new AdapterFragment1(this.getActivity(), getFrag1List());
-        rvChord.setAdapter(mIDataAdapterFrag1);
+        mDataMains = new ArrayList<>();
+        final RecyclerView mRecycler = (RecyclerView) getView().findViewById(R.id.mRecyclerFrag1);
+        mRecycler.setLayoutManager(new LinearLayoutManager(this.getActivity()));
+        mAdapterFragment1 = new AdapterFragment1(this.getActivity(), mDataMains);
+        mRecycler.setAdapter(mAdapterFragment1);
+
+        mChildEventListener = new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                if (dataSnapshot != null && dataSnapshot.getValue() != null) {
+                    try {
+
+                        DataAdapter model = dataSnapshot.getValue(DataAdapter.class);
+
+                        mDataMains.add(model);
+                        mRecycler.scrollToPosition(mDataMains.size() - 1);
+                        mAdapterFragment1.notifyItemInserted(mDataMains.size() - 1);
+                    } catch (Exception ex) {
+                        Log.e(TAG, ex.getMessage());
+                    }
+                }
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        };
+        mMessagesDatabaseReference.addChildEventListener(mChildEventListener);
     }
 
-    //Menambahkan Data
-    public ArrayList<Data> getFrag1List() {
-        ArrayList<Data> datas = new ArrayList<>();
-        Data data = new Data("Fragment 1", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Judul Penyakit", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Judul Penyakit", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Judul Penyakit", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Judul Penyakit", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-
-
-        return datas;
-    }
 
     //Memberi Nama Tab
     public String toString() {

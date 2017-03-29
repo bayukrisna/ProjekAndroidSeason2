@@ -7,8 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import java.util.List;
 
+import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.DataAdapter;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.R;
 
 /**
@@ -17,29 +18,29 @@ import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.R;
 
 public class AdapterFragment1 extends RecyclerView.Adapter<AdapterFragment1.MyViewHolder> {
 
-    ArrayList<Data> datas;
-    AdapterFragment1.IDataAdapter mIDataAdapterFrag1;
+    List<DataAdapter> mDatas;
+    IDataAdapter mIDataAdapterFrag1;
 
-    public AdapterFragment1(Context context, ArrayList<Data> datas) {
-        this.datas = datas;
-        mIDataAdapterFrag1 = (AdapterFragment1.IDataAdapter) context;
+    public AdapterFragment1(Context context, List<DataAdapter> datas) {
+        mIDataAdapterFrag1 = (IDataAdapter) context;
+        mDatas = datas;
     }
 
     //menampilkan layout fragment1list kedalam fragment_1
     @Override
-    public AdapterFragment1.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment1list, parent, false);
-        AdapterFragment1.MyViewHolder holder = new AdapterFragment1.MyViewHolder(v);
+        MyViewHolder holder = new MyViewHolder(v);
         return holder;
     }
 
     //merubah data pada fragment1list
     @Override
-    public void onBindViewHolder(AdapterFragment1.MyViewHolder holder, int position) {
-        Data data = datas.get(position);
-        holder.tvFrag11.setText(data.text1);
-        holder.tvFrag12.setText(data.text2);
-        holder.tvTitle.setText(data.text1.substring(0, 1));
+    public void onBindViewHolder(MyViewHolder holder, int position) {
+        DataAdapter data = mDatas.get(position); //lek gak iso diganti datas
+        holder.tvFrag11.setText(data.getTitle());
+        holder.tvFrag12.setText(data.getDesc());
+        holder.tvTitle.setText(data.getTitle().substring(0, 1));
         //holder.ivFrag1.setImageResource(data.img1);
 
     }
@@ -47,7 +48,7 @@ public class AdapterFragment1 extends RecyclerView.Adapter<AdapterFragment1.MyVi
     // mengatur berapa banyak data yang akan ditampilkan
     @Override
     public int getItemCount() {
-        return datas.size();
+        return mDatas.size();
     }
 
     //membuat interface dari adapater
