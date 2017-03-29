@@ -37,7 +37,7 @@ public class AdapterFragment2 extends RecyclerView.Adapter<AdapterFragment2.MyVi
     //merubah data pada item list
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        DataAdapter data = mDatas.get(position); //lek gak iso diganti datas
+        DataAdapter data = mDatas.get(position);
         holder.tvFrag11.setText(data.getTitle());
         holder.tvFrag12.setText(data.getDesc());
         holder.tvTitle.setText(data.getTitle().substring(0, 1));
