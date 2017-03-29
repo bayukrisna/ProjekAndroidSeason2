@@ -28,7 +28,7 @@
         android:text="Masukkan Nama Anda" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/editTextNama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -41,7 +41,7 @@
         android:text="Masukkan Berat Badan" />
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/editTextBerat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -54,19 +54,20 @@
         android:text="Masukkan Tinggi Badan" />
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/editTextTinggi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/JK"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Pilih Jenis Kelamin" />
 
     <RadioGroup
+        android:id="@+id/radioya"
         android:layout_width="match_parent"
         android:layout_height="86dp">
 
@@ -86,15 +87,34 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonCek"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Cek Hasil" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hasil Diagnosis Kesehatan"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/textViewHasil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Hasil" />
+
+    <TextView
+        android:id="@+id/textViewBerat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Berat Ideal" />
+
+    <TextView
+        android:id="@+id/textViewSaran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Saran" />
 
 </LinearLayout>
