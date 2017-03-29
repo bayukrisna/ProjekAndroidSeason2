@@ -17,7 +17,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.DataAdapter;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.R;
@@ -31,11 +30,12 @@ import static android.content.ContentValues.TAG;
 
 public class Fragment1 extends Fragment {
 
+
+    AdapterFragment1 mAdapterFragment1;
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference mMessagesDatabaseReference;
     private ChildEventListener mChildEventListener;
-    private List<DataAdapter> mDataMains;
-    private AdapterFragment1 mAdapterFragment1;
+    private ArrayList<DataAdapter> mDataMains;
 
     //menjadikan fragment_1 layout yang dimiliki oleh Fragment1.java
     @Nullable
@@ -45,7 +45,7 @@ public class Fragment1 extends Fragment {
         return v;
     }
 
-    public List<DataAdapter> getmDataMains() {
+    public ArrayList<DataAdapter> getmDataMains() {
         return mDataMains;
     }
 
@@ -54,7 +54,7 @@ public class Fragment1 extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mFirebaseDatabase = FirebaseDatabase.getInstance();
-        mMessagesDatabaseReference = mFirebaseDatabase.getReference().child("berat");
+        mMessagesDatabaseReference = mFirebaseDatabase.getReference().child("ringan");
 
         mDataMains = new ArrayList<>();
         final RecyclerView mRecycler = (RecyclerView) getView().findViewById(R.id.mRecyclerFrag1);
@@ -67,7 +67,6 @@ public class Fragment1 extends Fragment {
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 if (dataSnapshot != null && dataSnapshot.getValue() != null) {
                     try {
-
                         DataAdapter model = dataSnapshot.getValue(DataAdapter.class);
 
                         mDataMains.add(model);
@@ -107,4 +106,5 @@ public class Fragment1 extends Fragment {
     public String toString() {
         return "Fragment 1";
     }
+
 }

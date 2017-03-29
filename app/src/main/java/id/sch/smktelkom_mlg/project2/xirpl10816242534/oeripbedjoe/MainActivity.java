@@ -16,21 +16,23 @@ import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.Fragm
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.Fragment4;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.AdapterFragment1;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.AdapterFragment2;
-import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.Data;
 
 public class MainActivity extends AppCompatActivity implements AdapterFragment2.IDataAdapter, AdapterFragment1.IDataAdapter {
 
+    public static final String LINK_1_FRAGMENT = "link_1_fragment";
+    public static final String ID_FRAGMENT = "id_fragment";
     public static final String LINK_1 = "link1";
     public static final String LINK_2 = "link2";
     public static final String LINK_3 = "link3";
     public static final String LINK_4 = "link4";
     public static final String ID = "id";
+    public static final String LINK_2_FRAGMENT = "link_2_fragment";
 
     //mengambil metode untuk pengambilan data
     Fragment1 f1list = new Fragment1();
-    List<DataAdapter> datas1 = f1list.getmDataMains();
+    ArrayList<DataAdapter> datas1 = f1list.getmDataMains();
     Fragment2 f2list = new Fragment2();
-    ArrayList<Data> datas2 = f2list.getFrag2List();
+    List<DataAdapter> datas2 = f2list.getmDataMains();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,11 +110,19 @@ public class MainActivity extends AppCompatActivity implements AdapterFragment2.
     }
 
     //mengatur ketika item di klik (untuk Chord Adapter)
-    @Override
+    /*@Override
     public void doClickFrag1(int pos) {
         Intent intent = new Intent(this, ViewActivity.class);
         intent.putExtra(LINK_1, datas1.get(pos));
         intent.putExtra(ID, 1);
+        startActivity(intent);
+    }*/
+
+    @Override
+    public void doClickFrag1(int pos) {
+        Intent intent = new Intent(this, ViewActivity.class);
+        intent.putExtra(LINK_1_FRAGMENT, datas1.get(pos));
+        intent.putExtra(ID_FRAGMENT, 1);
         startActivity(intent);
     }
 
@@ -120,8 +130,8 @@ public class MainActivity extends AppCompatActivity implements AdapterFragment2.
     @Override
     public void doClickFrag2(int pos) {
         Intent intent = new Intent(this, ViewActivity.class);
-        intent.putExtra(LINK_2, datas2.get(pos));
-        intent.putExtra(ID, 2);
+        intent.putExtra(LINK_2_FRAGMENT, datas2.get(pos));
+        intent.putExtra(ID_FRAGMENT, 2);
         startActivity(intent);
     }
 /*
