@@ -47,45 +47,45 @@ public class Fragment2 extends Fragment {
 
     //Mengisikan Data
     public ArrayList<Data> getFrag2List() {
-        ArrayList<Data> datas = new ArrayList<>();
-        Data data = new Data("Fragment 1", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Judul Penyakit", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Judul Penyakit", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Judul Penyakit", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Judul Penyakit", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
-        data = new Data("Fragment 1", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
-        datas.add(data);
+        ArrayList<Data> datas1 = new ArrayList<>();
+        Data data = new Data("Fragment 2", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
+        datas1.add(data);
+        data = new Data("Fragment 2", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
+        datas1.add(data);
+        data = new Data("Fragment 2", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
+        datas1.add(data);
+        data = new Data("Fragment 2", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
+        datas1.add(data);
+        data = new Data("Fragment 2", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
+        datas1.add(data);
+        data = new Data("Fragment 2", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
+        datas1.add(data);
+        data = new Data("Fragment 2", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
+        datas1.add(data);
+        data = new Data("Fragment 2", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
+        datas1.add(data);
+        data = new Data("Fragment 2", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
+        datas1.add(data);
+        data = new Data("Fragment 2", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
+        datas1.add(data);
+        data = new Data("Fragment 2", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
+        datas1.add(data);
+        data = new Data("Fragment 2", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
+        datas1.add(data);
+        data = new Data("Fragment 2", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
+        datas1.add(data);
+        data = new Data("Fragment 2", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
+        datas1.add(data);
+        data = new Data("Fragment 2", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
+        datas1.add(data);
+        data = new Data("Fragment 2", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
+        datas1.add(data);
+        data = new Data("Fragment 2", R.drawable.sao1, R.drawable.kirito, "KIRITO", "ORDINAL SCALE");
+        datas1.add(data);
+        data = new Data("Fragment 2", R.drawable.sao2, R.drawable.asuna, "ASUNA", "ORDINAL SCALE");
+        datas1.add(data);
 
-
-        return datas;
-
+        return datas1;
     }
 
     //Memberi Nama Tab

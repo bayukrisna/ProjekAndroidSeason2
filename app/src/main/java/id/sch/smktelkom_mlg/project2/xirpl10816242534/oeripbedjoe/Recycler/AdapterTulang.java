@@ -1,5 +1,6 @@
 package id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +11,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.R;
-import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.TulangActivity;
+import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.TulangModel;
 
 /**
  * Created by Akbar on 20/03/2017.
@@ -18,11 +19,12 @@ import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.TulangActivity
 
 public class AdapterTulang extends RecyclerView.Adapter<AdapterTulang.ViewHolder> {
 
-    ArrayList<Data> datas;
+    ArrayList<TulangModel> datas;
     IDataAdapter mTulangAdapter;
 
-    public AdapterTulang(TulangActivity tulangActivity, ArrayList<Data> datas) {
+    public AdapterTulang(Context context, ArrayList<TulangModel> datas) {
         this.datas = datas;
+        mTulangAdapter = (IDataAdapter) context;
     }
 
     @Override
@@ -34,10 +36,10 @@ public class AdapterTulang extends RecyclerView.Adapter<AdapterTulang.ViewHolder
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Data data = datas.get(position);
-        holder.tvFrag11.setText(data.text1);
-        holder.tvFrag12.setText(data.text2);
-        holder.ivFrag1.setImageResource(data.img1);
+        TulangModel data = datas.get(position);
+        holder.tvJudul.setText(data.getTitleTulang());
+        holder.tvDefinisi.setText(data.getDescTulang());
+        holder.ivImage.setImageResource(data.getImgTulang());
     }
 
     @Override
@@ -50,16 +52,16 @@ public class AdapterTulang extends RecyclerView.Adapter<AdapterTulang.ViewHolder
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView ivFrag1;
-        TextView tvFrag12;
-        TextView tvFrag11;
+        TextView tvJudul;
+        TextView tvDefinisi;
+        ImageView ivImage;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
-            tvFrag12 = (TextView) itemView.findViewById(R.id.textViewFrag11);
-            ivFrag1 = (ImageView) itemView.findViewById(R.id.imageViewFrag1);
-            tvFrag11 = (TextView) itemView.findViewById(R.id.textViewFrag12);
+            tvDefinisi = (TextView) itemView.findViewById(R.id.textViewFrag11);
+            tvJudul = (TextView) itemView.findViewById(R.id.textViewFrag12);
+            ivImage = (ImageView) itemView.findViewById(R.id.imageViewFrag1);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

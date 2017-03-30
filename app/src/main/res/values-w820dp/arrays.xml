@@ -16,12 +16,19 @@
   -->
 <resources>
     <string-array name="places">
-        <item>Maag</item>
-        <item>Masuk Angin</item>
-        <item>Diare</item>
-        <item>Sembelit</item>
-        <item>Muntaber</item>
-        <item>Cacingan (Cacing Kremi)</item>
+        <item>Ankylosing Spondylitis</item>
+        <item>Frozen Shoulder</item>
+        <item>Kondisi Khusus (Tua)</item>
+        <item>Kifosis</item>
+        <item>Lordosis</item>
+        <item>Mielomeningokel</item>
+        <item>Meningkoel</item>
+        <item>Osteoporosis</item>
+        <item>Polymyalgia RheuMatica (Rematik)</item>
+        <item>Skoliosis</item>
+        <item>Slipped Disc</item>
+        <item>Stenosis</item>
+        <item>TBC Tulang</item>
     </string-array>
     <string-array name="place_desc">
         <item>Maag atau radang lambung atau tukak lambung adalah gejala penyakit yang menyerang
