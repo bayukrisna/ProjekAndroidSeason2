@@ -1,43 +1,29 @@
 package id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.Fragment1;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.Fragment2;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.Fragment3;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.Fragment4;
-import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.AdapterFragment1;
-import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.AdapterFragment2;
 
-public class MainActivity extends AppCompatActivity implements AdapterFragment2.IDataAdapter, AdapterFragment1.IDataAdapter {
+public class MainActivity extends AppCompatActivity {
 
-    public static final String LINK_1_FRAGMENT = "link_1_fragment";
-    public static final String ID_FRAGMENT = "id_fragment";
     public static final String LINK_1 = "link1";
     public static final String LINK_2 = "link2";
     public static final String LINK_3 = "link3";
     public static final String LINK_4 = "link4";
     public static final String ID = "id";
-    public static final String LINK_2_FRAGMENT = "link_2_fragment";
 
-    //mengambil metode untuk pengambilan data
-    Fragment1 f1list = new Fragment1();
-    ArrayList<DataAdapter> datas1 = f1list.getmDataMains();
-    Fragment2 f2list = new Fragment2();
-    List<DataAdapter> datas2 = f2list.getmDataMains();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         ViewPager vp = (ViewPager) findViewById(R.id.mViewPager);
         this.addPages(vp);
@@ -59,12 +45,6 @@ public class MainActivity extends AppCompatActivity implements AdapterFragment2.
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.item_menu, menu);
-
-        return true;
-    }
 
     //menambahkan fragment kedalam view pager
     private void addPages(ViewPager pager) {
@@ -110,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements AdapterFragment2.
     }
 
     //mengatur ketika item di klik (untuk Chord Adapter)
-    /*@Override
+  /* @Override
     public void doClickFrag1(int pos) {
         Intent intent = new Intent(this, ViewActivity.class);
         intent.putExtra(LINK_1, datas1.get(pos));
@@ -118,22 +98,14 @@ public class MainActivity extends AppCompatActivity implements AdapterFragment2.
         startActivity(intent);
     }*/
 
-    @Override
-    public void doClickFrag1(int pos) {
-        Intent intent = new Intent(this, ViewActivity.class);
-        intent.putExtra(LINK_1_FRAGMENT, datas1.get(pos));
-        intent.putExtra(ID_FRAGMENT, 1);
-        startActivity(intent);
-    }
-
-    //mengatur ketika item di klik (untuk Lagu Adapter)
+/*    //mengatur ketika item di klik (untuk Lagu Adapter)
     @Override
     public void doClickFrag2(int pos) {
         Intent intent = new Intent(this, ViewActivity.class);
-        intent.putExtra(LINK_2_FRAGMENT, datas2.get(pos));
-        intent.putExtra(ID_FRAGMENT, 2);
+        intent.putExtra(LINK_2, datas2.get(pos));
+        intent.putExtra(ID, 2);
         startActivity(intent);
-    }
+    }*/
 /*
     @Override
     public void doClickFrag3(int pos) {

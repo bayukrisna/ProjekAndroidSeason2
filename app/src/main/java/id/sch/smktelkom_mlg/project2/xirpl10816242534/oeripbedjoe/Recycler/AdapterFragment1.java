@@ -23,7 +23,7 @@ public class AdapterFragment1 extends RecyclerView.Adapter<AdapterFragment1.MyVi
 
     public AdapterFragment1(Context context, ArrayList<DataAdapter> datas) {
         mIDataAdapterFrag1 = (IDataAdapter) context;
-        mDatas = datas;
+        this.mDatas = datas;
     }
 
     //menampilkan layout fragment1list kedalam fragment_1
@@ -41,6 +41,7 @@ public class AdapterFragment1 extends RecyclerView.Adapter<AdapterFragment1.MyVi
         holder.tvFrag11.setText(data.getTitle());
         holder.tvFrag12.setText(data.getDesc());
         holder.tvTitle.setText(data.getTitle().substring(0, 1));
+
         //holder.ivFrag1.setImageResource(data.img1);
 
     }
@@ -48,7 +49,9 @@ public class AdapterFragment1 extends RecyclerView.Adapter<AdapterFragment1.MyVi
     // mengatur berapa banyak data yang akan ditampilkan
     @Override
     public int getItemCount() {
-        return mDatas.size();
+        if (mDatas != null)
+            return mDatas.size();
+        return 0;
     }
 
     //membuat interface dari adapater

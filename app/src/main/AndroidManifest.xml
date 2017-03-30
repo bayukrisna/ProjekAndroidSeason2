@@ -12,11 +12,6 @@
         <activity android:name=".MainActivity">
         </activity>
         <activity
-            android:name=".Recycler.DetailActivity"
-            android:label="@string/title_activity_detail"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity
             android:name=".TulangActivity"
             android:label="TulangActivity"/>
         <activity

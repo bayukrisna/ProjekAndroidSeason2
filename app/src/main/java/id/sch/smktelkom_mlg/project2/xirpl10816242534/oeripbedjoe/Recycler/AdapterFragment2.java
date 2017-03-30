@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.util.List;
+import java.util.ArrayList;
 
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.DataAdapter;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.R;
@@ -18,12 +18,12 @@ import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.R;
 
 public class AdapterFragment2 extends RecyclerView.Adapter<AdapterFragment2.MyViewHolder> {
 
-    List<DataAdapter> mDatas;
+    ArrayList<DataAdapter> mDatas;
     IDataAdapter mIDataAdapterFrag2;
 
-    public AdapterFragment2(Context context, List<DataAdapter> datas) {
+    public AdapterFragment2(Context context, ArrayList<DataAdapter> datas) {
         mIDataAdapterFrag2 = (IDataAdapter) context;
-        mDatas = datas;
+        this.mDatas = datas;
     }
 
     //menampilkan layout fragment1list kedalam layout fragment_2
@@ -46,7 +46,9 @@ public class AdapterFragment2 extends RecyclerView.Adapter<AdapterFragment2.MyVi
     //mengatur berapa data yang ditampilkan
     @Override
     public int getItemCount() {
-        return mDatas.size();
+        if (mDatas != null)
+            return mDatas.size();
+        return 0;
     }
 
     //membuat interface
