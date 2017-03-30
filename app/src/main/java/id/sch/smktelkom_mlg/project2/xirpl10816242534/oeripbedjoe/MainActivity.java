@@ -5,9 +5,6 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.Fragment1;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.Fragment2;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.Fragment3;
@@ -21,15 +18,12 @@ public class MainActivity extends AppCompatActivity {
     public static final String LINK_4 = "link4";
     public static final String ID = "id";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
-        DatabaseReference ringanRef = FirebaseDatabase.getInstance().getReference("ringan");
-        ringanRef.keepSynced(true);
-        DatabaseReference beratRef = FirebaseDatabase.getInstance().getReference("berat");
-        beratRef.keepSynced(true);
+
 
         ViewPager vp = (ViewPager) findViewById(R.id.mViewPager);
         this.addPages(vp);

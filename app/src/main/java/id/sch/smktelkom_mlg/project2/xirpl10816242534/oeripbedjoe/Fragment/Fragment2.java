@@ -1,5 +1,6 @@
 package id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,7 +10,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -17,11 +20,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.DataAdapter;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.R;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.AdapterFragment2;
+import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.ViewActivity;
 
 import static android.content.ContentValues.TAG;
 
@@ -31,11 +34,14 @@ import static android.content.ContentValues.TAG;
 
 public class Fragment2 extends Fragment {
 
+    public static final String LINK_FRA_2 = "link_fra_2";
+    public static final String ID_FRA_2 = "id_fra_2";
+    FirebaseRecyclerAdapter mAdapter;
     AdapterFragment2 mIDataAdapterFrag2;
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference mMessagesDatabaseReference;
     private ChildEventListener mChildEventListener;
-    private List<DataAdapter> mDataMains;
+    private ArrayList<DataAdapter> mDataMains = new ArrayList<>();
 
     //Menjadikan fragment_2 layout yang dimiliki oleh Fragment2.java
     @Nullable
@@ -45,7 +51,7 @@ public class Fragment2 extends Fragment {
         return v;
     }
 
-    public List<DataAdapter> getmDataMains() {
+    public ArrayList<DataAdapter> getmDataMains() {
         return mDataMains;
     }
 
@@ -55,12 +61,8 @@ public class Fragment2 extends Fragment {
         super.onActivityCreated(savedInstanceState);
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mMessagesDatabaseReference = mFirebaseDatabase.getReference().child("berat");
-
-        mDataMains = new ArrayList<>();
         final RecyclerView mRecycler = (RecyclerView) getView().findViewById(R.id.mRecyclerFrag1);
-        mRecycler.setLayoutManager(new LinearLayoutManager(this.getActivity()));
-        mIDataAdapterFrag2 = new AdapterFragment2(this.getActivity(), mDataMains);
-        mRecycler.setAdapter(mIDataAdapterFrag2);
+        DatabaseReference mRef = FirebaseDatabase.getInstance().getReference().child("berat");
 
         mChildEventListener = new ChildEventListener() {
             @Override
@@ -71,11 +73,12 @@ public class Fragment2 extends Fragment {
 
                         mDataMains.add(model);
                         mRecycler.scrollToPosition(mDataMains.size() - 1);
-                        mIDataAdapterFrag2.notifyItemInserted(mDataMains.size() - 1);
+                        mAdapter.notifyItemInserted(mDataMains.size() - 1);
                     } catch (Exception ex) {
                         Log.e(TAG, ex.getMessage());
                     }
                 }
+                mAdapter.notifyDataSetChanged();
             }
 
             @Override
@@ -98,15 +101,82 @@ public class Fragment2 extends Fragment {
 
             }
         };
-        mMessagesDatabaseReference.addChildEventListener(mChildEventListener);
+        mRef.addChildEventListener(mChildEventListener);
+
+        mRecycler.setHasFixedSize(true);
+        mRecycler.setLayoutManager(new LinearLayoutManager(this.getActivity()));
+        mAdapter = new FirebaseRecyclerAdapter<DataAdapter, BeratHolder>(DataAdapter.class, R.layout.fragment2list, BeratHolder.class, mRef) {
+            @Override
+            protected void populateViewHolder(BeratHolder beratViewHolder, DataAdapter data, int position) {
+                beratViewHolder.setName(data.getTitle());
+                beratViewHolder.setText(data.getDesc());
+                beratViewHolder.setAbjad(data.getTitle().substring(0, 1));
+            }
+
+            @Override
+            public BeratHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+                BeratHolder viewHolder = super.onCreateViewHolder(parent, viewType);
+                viewHolder.setOnClickListener(new BeratHolder.ClickListener() {
+                    @Override
+                    public void onItemClick(View view, int position) {
+                        Intent intent = new Intent(getActivity(), ViewActivity.class);
+                        intent.putExtra(LINK_FRA_2, mDataMains.get(position));
+                        intent.putExtra(ID_FRA_2, 1);
+                        startActivity(intent);
+                    }
+                });
+                return viewHolder;
+            }
+        };
+        mRecycler.setAdapter(mAdapter);
     }
 
-
-    //Mengisikan Data
 
 
     //Memberi Nama Tab
     public String toString() {
         return "Fragment 2";
+    }
+
+    private static class BeratHolder extends RecyclerView.ViewHolder {
+        TextView tvFrag21;
+        TextView tvFrag22;
+        TextView tvTitle;
+        private BeratHolder.ClickListener mClickListener;
+
+        public BeratHolder(View itemView) {
+            super(itemView);
+            tvFrag21 = (TextView) itemView.findViewById(R.id.textViewFrag11);
+            tvFrag22 = (TextView) itemView.findViewById(R.id.textViewFrag12);
+            tvTitle = (TextView) itemView.findViewById(R.id.textViewTitle);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mClickListener.onItemClick(v, getAdapterPosition());
+                }
+            });
+        }
+
+        public void setOnClickListener(BeratHolder.ClickListener clickListener) {
+            mClickListener = clickListener;
+        }
+
+        public void setName(String name) {
+            tvFrag22.setText(name);
+        }
+
+        public void setText(String text) {
+            tvFrag21.setText(text);
+        }
+
+        public void setAbjad(String abjad) {
+            tvTitle.setText(abjad);
+        }
+
+        public interface ClickListener {
+            void onItemClick(View view, int position);
+        }
+
     }
 }
