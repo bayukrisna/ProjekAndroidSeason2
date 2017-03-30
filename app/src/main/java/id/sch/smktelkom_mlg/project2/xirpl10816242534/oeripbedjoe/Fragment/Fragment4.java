@@ -85,53 +85,60 @@ public class Fragment4 extends Fragment {
         boolean valid = true;
 
         String nama = etnama.getText().toString();
+        String beratS = etBerat.getText().toString();
+        String tinggiS = etTinggi.getText().toString();
         int berat = etBerat.getText().toString().isEmpty() ? 0 : Integer.parseInt(etBerat.getText().toString());
         int tinggi = etTinggi.getText().toString().isEmpty() ? 0 : Integer.parseInt(etTinggi.getText().toString());
-        //boolean pilih = radioyaa.isSelected();
-        //boolean pilih1 = radioyaa1.isSelected();
-        double ti = Double.parseDouble(etTinggi.getText().toString());
-        double bt = Double.parseDouble(etBerat.getText().toString());
+
         //ti = Double.valueOf(String.valueOf(etTinggi.getText()));
         //bt = Double.valueOf(String.valueOf(etBerat.getText()));
-
 
         if (nama.isEmpty()) {
             etnama.setError("Nama Belum Diisi");
             valid = false;
         } else {
             etnama.setError(null);
+            tvHasil.setText("Hai" + nama);
         }
 
-        if (bt == 0) {
+        if (beratS.isEmpty()) {
             etBerat.setError("Berat Badan Harus Diisi");
             valid = false;
         }
 
-        if (ti == 0) {
+        if (tinggiS.isEmpty()) {
             etTinggi.setError("Tinggi Badan Harus Diisi");
             valid = false;
         }
 
-        if (radioyaa.isChecked()) {
+        if (radiogrup.getCheckedRadioButtonId() == -1) {
+            jenkel.setText("Pilih Jenis Kelamin (Anda Belum Mengisi)");
+            jenkel.setTextColor(getResources().getColor(R.color.red));
+            valid = false;
+        } else {
+            
+        }
+
+        /*if (radioyaa.isChecked()) {
             hi = (ti - 100) * 1;
         } else if (radioyaa1.isChecked()) {
             hi = (ti - 104) * 1;
         }
-        temp = Double.toString(hi.intValue());
+        temp = hi.toString();
 
         if (hi < bt) {
             tvBerat.setText(temp);
-            tvHasil.setText("Hai" + nama + "Sepertinya Kamu OverWeight");
-            tvSaran.setText("Banyaklah Berolahraga dan hindari makanan berkoresterol");
+            tvHasil.setText("Sepertinya Anda OverWeight");
+            tvSaran.setText("Banyaklah Berolahraga dan hindari makanan berkoresterol tinggi");
         } else if (hi > bt) {
             tvBerat.setText(temp);
-            tvHasil.setText("Hai" + nama + "Sepertinya Kamu Underweight");
-            tvSaran.setText("Banyaklah Makan Makanan Berkarbohidrat");
+            tvHasil.setText("Sepertinya Kamu Underweight");
+            tvSaran.setText("Banyaklah Makan - Makanan Berkarbohidrat");
         } else {
             tvBerat.setText(temp);
-            tvHasil.setText("Hai" + nama + "Berat Badan Sudah Ideal");
-            tvSaran.setText("Lanjutkan Pola Makan dan Gaya hidup Sehat");
-        }
+            tvHasil.setText("Berat Badan Sudah Ideal");
+            tvSaran.setText("Lanjutkan pola makan anda, serta gaya hidup sehat anda");
+        }*/
 
         return valid;
     }
