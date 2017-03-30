@@ -34,7 +34,7 @@ public class Fragment4 extends Fragment {
     TextView jenkel;
     RadioGroup radiogrup;
 
-    Double ti, bt, hi;
+    int ti, bt, hi;
     String temp = "";
 
     //Menjadikan fragment_4 layout yang dimiliki oleh Fragment4.java
@@ -73,13 +73,11 @@ public class Fragment4 extends Fragment {
     }
 
     private void doClick() {
-
-
         if (isvalid()) {
-
-
+            doHasil();
         }
     }
+
 
     private boolean isvalid() {
         boolean valid = true;
@@ -87,28 +85,36 @@ public class Fragment4 extends Fragment {
         String nama = etnama.getText().toString();
         String beratS = etBerat.getText().toString();
         String tinggiS = etTinggi.getText().toString();
-        int berat = etBerat.getText().toString().isEmpty() ? 0 : Integer.parseInt(etBerat.getText().toString());
-        int tinggi = etTinggi.getText().toString().isEmpty() ? 0 : Integer.parseInt(etTinggi.getText().toString());
-
-        //ti = Double.valueOf(String.valueOf(etTinggi.getText()));
-        //bt = Double.valueOf(String.valueOf(etBerat.getText()));
+        //int berat = etBerat.getText().toString().isEmpty() ? 0 : Integer.parseInt(etBerat.getText().toString());
+        //int tinggi = etTinggi.getText().toString().isEmpty() ? 0 : Integer.parseInt(etTinggi.getText().toString());
+        
 
         if (nama.isEmpty()) {
             etnama.setError("Nama Belum Diisi");
+            etnama.setTextColor(getResources().getColor(R.color.red));
             valid = false;
         } else {
             etnama.setError(null);
-            tvHasil.setText("Hai" + nama);
         }
 
         if (beratS.isEmpty()) {
             etBerat.setError("Berat Badan Harus Diisi");
+            etBerat.setTextColor(getResources().getColor(R.color.red));
             valid = false;
+        } else {
+            jenkel.setTextColor(getResources().getColor(R.color.colorPrimary));
+            bt = Integer.parseInt(etBerat.getText().toString());
+            etBerat.setError(null);
         }
 
         if (tinggiS.isEmpty()) {
             etTinggi.setError("Tinggi Badan Harus Diisi");
+            etTinggi.setTextColor(getResources().getColor(R.color.red));
             valid = false;
+        } else {
+            jenkel.setTextColor(getResources().getColor(R.color.colorPrimary));
+            ti = Integer.parseInt(etTinggi.getText().toString());
+            etTinggi.setError(null);
         }
 
         if (radiogrup.getCheckedRadioButtonId() == -1) {
@@ -116,31 +122,45 @@ public class Fragment4 extends Fragment {
             jenkel.setTextColor(getResources().getColor(R.color.red));
             valid = false;
         } else {
-            
+            jenkel.setText("Pilih Jenis Kelamin");
+            jenkel.setTextColor(getResources().getColor(R.color.colorPrimary));
         }
 
-        /*if (radioyaa.isChecked()) {
-            hi = (ti - 100) * 1;
+        return valid;
+    }
+
+    private void doHasil() {
+
+        if (radioyaa.isChecked()) {
+            hi = ti - 104;
         } else if (radioyaa1.isChecked()) {
-            hi = (ti - 104) * 1;
+            hi = ti - 100;
         }
-        temp = hi.toString();
+
+        temp = Integer.toString(hi);
 
         if (hi < bt) {
-            tvBerat.setText(temp);
+            tvBerat.setTextColor(getResources().getColor(R.color.red));
+            tvHasil.setTextColor(getResources().getColor(R.color.red));
+            tvSaran.setTextColor(getResources().getColor(R.color.red));
+            tvBerat.setText("Berat Badan Idealmu " + temp);
             tvHasil.setText("Sepertinya Anda OverWeight");
             tvSaran.setText("Banyaklah Berolahraga dan hindari makanan berkoresterol tinggi");
         } else if (hi > bt) {
-            tvBerat.setText(temp);
+            tvBerat.setTextColor(getResources().getColor(R.color.red));
+            tvHasil.setTextColor(getResources().getColor(R.color.red));
+            tvSaran.setTextColor(getResources().getColor(R.color.red));
+            tvBerat.setText("Berat Badan Idealmu " + temp);
             tvHasil.setText("Sepertinya Kamu Underweight");
             tvSaran.setText("Banyaklah Makan - Makanan Berkarbohidrat");
         } else {
-            tvBerat.setText(temp);
+            tvBerat.setTextColor(getResources().getColor(R.color.colorPrimary));
+            tvHasil.setTextColor(getResources().getColor(R.color.colorPrimary));
+            tvSaran.setTextColor(getResources().getColor(R.color.colorPrimary));
+            tvBerat.setText("Berat Badan Idealmu " + temp);
             tvHasil.setText("Berat Badan Sudah Ideal");
             tvSaran.setText("Lanjutkan pola makan anda, serta gaya hidup sehat anda");
-        }*/
-
-        return valid;
+        }
     }
 
 

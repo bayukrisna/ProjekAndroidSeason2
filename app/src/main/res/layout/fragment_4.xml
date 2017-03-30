@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="16dp"
@@ -19,13 +20,15 @@
         android:layout_gravity="center"
         android:paddingBottom="25dp"
         android:text="Pengecekan Ideal Tubuh"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Masukkan Nama Anda" />
+        android:text="Masukkan Nama Anda"
+        android:textColor="@color/colorPrimary" />
 
     <EditText
         android:id="@+id/editTextNama"
@@ -38,7 +41,8 @@
         android:id="@+id/textView7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Masukkan Berat Badan" />
+        android:text="Masukkan Berat Badan"
+        android:textColor="@color/colorPrimary" />
 
     <EditText
         android:id="@+id/editTextBerat"
@@ -51,7 +55,8 @@
         android:id="@+id/textView8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Masukkan Tinggi Badan" />
+        android:text="Masukkan Tinggi Badan"
+        android:textColor="@color/colorPrimary" />
 
     <EditText
         android:id="@+id/editTextTinggi"
@@ -64,7 +69,8 @@
         android:id="@+id/JK"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pilih Jenis Kelamin" />
+        android:text="Pilih Jenis Kelamin"
+        android:textColor="@color/colorPrimary" />
 
     <RadioGroup
         android:id="@+id/radioya"
@@ -97,24 +103,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Hasil Diagnosis Kesehatan"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary" />
 
     <TextView
         android:id="@+id/textViewHasil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hasil" />
+        android:textColor="@color/colorPrimary"
+        tools:text="Hasil" />
 
     <TextView
         android:id="@+id/textViewBerat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Berat Ideal" />
+        android:textColor="@color/colorPrimary"
+        tools:text="Berat Ideal" />
 
     <TextView
         android:id="@+id/textViewSaran"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Saran" />
+        android:textColor="@color/colorPrimary"
+        tools:text="Saran" />
 
 </LinearLayout>
