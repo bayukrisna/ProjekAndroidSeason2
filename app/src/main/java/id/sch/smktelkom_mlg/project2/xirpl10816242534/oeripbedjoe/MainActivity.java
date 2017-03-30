@@ -5,20 +5,20 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.Fragment1;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.Fragment2;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.Fragment3;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.Fragment4;
-import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.AdapterFragment1;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.AdapterFragment2;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.Data;
 
-public class MainActivity extends AppCompatActivity implements AdapterFragment2.IDataAdapter, AdapterFragment1.IDataAdapter {
+public class MainActivity extends AppCompatActivity implements AdapterFragment2.IDataAdapter {
 
     public static final String LINK_1 = "link1";
     public static final String LINK_2 = "link2";
@@ -28,14 +28,23 @@ public class MainActivity extends AppCompatActivity implements AdapterFragment2.
 
     //mengambil metode untuk pengambilan data
     Fragment1 f1list = new Fragment1();
-    List<DataAdapter> datas1 = f1list.getmDataMains();
+    ArrayList<DataAdapter> datas1 = f1list.getmDataMains();
     Fragment2 f2list = new Fragment2();
     ArrayList<Data> datas2 = f2list.getFrag2List();
+    ArrayList<DataAdapter> mListAll = new ArrayList<>();
+    boolean isFiltered;
+    ArrayList<Integer> mListMapFilter = new ArrayList<>();
+    String mQuery;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+        DatabaseReference ringanRef = FirebaseDatabase.getInstance().getReference("ringan");
+        ringanRef.keepSynced(true);
+        DatabaseReference beratRef = FirebaseDatabase.getInstance().getReference("berat");
+        beratRef.keepSynced(true);
 
         ViewPager vp = (ViewPager) findViewById(R.id.mViewPager);
         this.addPages(vp);
@@ -57,12 +66,6 @@ public class MainActivity extends AppCompatActivity implements AdapterFragment2.
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.item_menu, menu);
-
-        return true;
-    }
 
     //menambahkan fragment kedalam view pager
     private void addPages(ViewPager pager) {
@@ -108,13 +111,13 @@ public class MainActivity extends AppCompatActivity implements AdapterFragment2.
     }
 
     //mengatur ketika item di klik (untuk Chord Adapter)
-    @Override
+  /* @Override
     public void doClickFrag1(int pos) {
         Intent intent = new Intent(this, ViewActivity.class);
         intent.putExtra(LINK_1, datas1.get(pos));
         intent.putExtra(ID, 1);
         startActivity(intent);
-    }
+    }*/
 
     //mengatur ketika item di klik (untuk Lagu Adapter)
     @Override

@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.util.List;
+import java.util.ArrayList;
 
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.DataAdapter;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.R;
@@ -18,12 +18,12 @@ import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.R;
 
 public class AdapterFragment1 extends RecyclerView.Adapter<AdapterFragment1.MyViewHolder> {
 
-    List<DataAdapter> mDatas;
+    ArrayList<DataAdapter> mDatas;
     IDataAdapter mIDataAdapterFrag1;
 
-    public AdapterFragment1(Context context, List<DataAdapter> datas) {
+    public AdapterFragment1(Context context, ArrayList<DataAdapter> datas) {
         mIDataAdapterFrag1 = (IDataAdapter) context;
-        mDatas = datas;
+        this.mDatas = datas;
     }
 
     //menampilkan layout fragment1list kedalam fragment_1
@@ -37,10 +37,11 @@ public class AdapterFragment1 extends RecyclerView.Adapter<AdapterFragment1.MyVi
     //merubah data pada fragment1list
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        DataAdapter data = mDatas.get(position); //lek gak iso diganti datas
+        DataAdapter data = mDatas.get(position);
         holder.tvFrag11.setText(data.getTitle());
         holder.tvFrag12.setText(data.getDesc());
         holder.tvTitle.setText(data.getTitle().substring(0, 1));
+
         //holder.ivFrag1.setImageResource(data.img1);
 
     }
@@ -48,7 +49,9 @@ public class AdapterFragment1 extends RecyclerView.Adapter<AdapterFragment1.MyVi
     // mengatur berapa banyak data yang akan ditampilkan
     @Override
     public int getItemCount() {
-        return mDatas.size();
+        if (mDatas != null)
+            return mDatas.size();
+        return 0;
     }
 
     //membuat interface dari adapater
