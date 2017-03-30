@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Recycler.DetailActivity"
+    tools:context="id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.DetailActivity"
     tools:showIn="@layout/activity_detail">
 
     <LinearLayout
@@ -17,35 +18,54 @@
         android:paddingTop="16dp">
 
         <TextView
-            android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Judul"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
-            android:textColor="@color/colorPrimary" />
+            android:layout_marginBottom="16dp"
+            android:text="Definisi"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="20sp"/>
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="16dp"
-            android:text="deskripsi"
-            android:textAlignment="center" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="16dp"
-            android:src="@drawable/kirito" />
-
-        <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/definisi_tulang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lokasi" />
-    </LinearLayout>
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            tools:text="deskripsi"/>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="\n Gejala"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/gejala_tulang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            tools:text="Gejala"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="\n Penanganan"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/penanganan_tulang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            tools:text="Lokasi"/>
+
+    </LinearLayout>
 
 </android.support.v4.widget.NestedScrollView>
