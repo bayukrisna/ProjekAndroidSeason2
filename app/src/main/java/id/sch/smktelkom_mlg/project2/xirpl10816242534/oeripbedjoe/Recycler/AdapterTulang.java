@@ -5,7 +5,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -39,7 +38,7 @@ public class AdapterTulang extends RecyclerView.Adapter<AdapterTulang.ViewHolder
         TulangModel data = datas.get(position);
         holder.tvJudul.setText(data.getTitleTulang());
         holder.tvDefinisi.setText(data.getDescTulang());
-        holder.ivImage.setImageResource(data.getImgTulang());
+        holder.tvAbjad.setText(data.getTitleTulang().substring(0, 1));
     }
 
     @Override
@@ -54,14 +53,14 @@ public class AdapterTulang extends RecyclerView.Adapter<AdapterTulang.ViewHolder
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvJudul;
         TextView tvDefinisi;
-        ImageView ivImage;
+        TextView tvAbjad;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
-            tvDefinisi = (TextView) itemView.findViewById(R.id.textViewFrag11);
-            tvJudul = (TextView) itemView.findViewById(R.id.textViewFrag12);
-            ivImage = (ImageView) itemView.findViewById(R.id.imageViewFrag1);
+            tvDefinisi = (TextView) itemView.findViewById(R.id.textViewFrag11ah);
+            tvJudul = (TextView) itemView.findViewById(R.id.textViewFrag12ah);
+            tvAbjad = (TextView) itemView.findViewById(R.id.textViewTitleah);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

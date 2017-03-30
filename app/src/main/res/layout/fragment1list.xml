@@ -31,8 +31,6 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="100dp"
             android:layout_marginTop="8dp"
-            android:layout_toEndOf="@+id/imageViewFrag1"
-            android:layout_toRightOf="@+id/imageViewFrag1"
             android:ellipsize="end"
             android:maxLines="1"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"

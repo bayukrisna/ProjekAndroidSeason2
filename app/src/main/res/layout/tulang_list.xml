@@ -1,48 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="?android:attr/selectableItemBackground"
-    android:paddingLeft="8dp"
-    android:paddingRight="8dp"
-    android:paddingTop="8dp">
-
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary">
 
-        <ImageView
-            android:id="@+id/imageViewFrag1"
+        <TextView
+            android:id="@+id/textViewTitleah"
+            style="@style/TextAppearance.AppCompat.Display1"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:scaleType="centerCrop"
-            tools:src="" />
+            android:layout_weight="1"
+            android:background="?colorPrimary"
+            android:gravity="center"
+            android:textColor="?colorAccent"
+            tools:text="A"/>
 
         <TextView
-            android:id="@+id/textViewFrag11"
+            android:id="@+id/textViewFrag11ah"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginLeft="100dp"
             android:layout_marginTop="8dp"
-            android:layout_toEndOf="@+id/imageViewFrag1"
-            android:layout_toRightOf="@+id/imageViewFrag1"
             android:ellipsize="end"
             android:maxLines="1"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             tools:text="Judul" />
 
         <TextView
-            android:id="@+id/textViewFrag12"
+            android:id="@+id/textViewFrag12ah"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/textViewFrag11"
-            android:layout_alignStart="@+id/textViewFrag11"
-            android:layout_below="@+id/textViewFrag11"
+
+            android:layout_alignLeft="@+id/textViewFrag11ah"
+            android:layout_alignStart="@+id/textViewFrag11ah"
+            android:layout_below="@+id/textViewFrag11ah"
             android:ellipsize="end"
             android:maxLines="2"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
