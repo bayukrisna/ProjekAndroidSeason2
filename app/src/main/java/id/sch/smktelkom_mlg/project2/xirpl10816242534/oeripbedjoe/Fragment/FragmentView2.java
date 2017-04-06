@@ -26,12 +26,18 @@ public class FragmentView2 extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         int idFra = getActivity().getIntent().getIntExtra(Fragment1.ID_FRA_1, 0);
+        int idFra2 = getActivity().getIntent().getIntExtra(Fragment2.ID_FRA_2, 0);
         TextView tvIndication;
 
         //jika id nya 1 maka proses yang dijalankan
         if (idFra == 1) {
             //mendapatkan intent dari Main Activity dengan Constanta LINK_1
             DataAdapter data = (DataAdapter) getActivity().getIntent().getSerializableExtra(Fragment1.LINK_FRA_1);
+            tvIndication = (TextView) getView().findViewById(R.id.textViewIndication);
+            tvIndication.setText(data.getIndication());
+        }
+        if (idFra2 == 2) {
+            DataAdapter data = (DataAdapter) getActivity().getIntent().getSerializableExtra(Fragment2.LINK_FRA_2);
             tvIndication = (TextView) getView().findViewById(R.id.textViewIndication);
             tvIndication.setText(data.getIndication());
         }

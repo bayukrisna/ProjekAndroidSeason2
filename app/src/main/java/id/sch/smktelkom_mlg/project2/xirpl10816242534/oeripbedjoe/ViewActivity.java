@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.Fragment1;
+import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.Fragment2;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.FragmentView1;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.FragmentView2;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.FragmentView3;
@@ -58,16 +59,17 @@ public class ViewActivity extends AppCompatActivity {
         int id = getIntent().getIntExtra(MainActivity.ID, 0);
         int idTulang = getIntent().getIntExtra(TulangActivity.ID_TULANG, 0);
         int idFra = getIntent().getIntExtra(Fragment1.ID_FRA_1, 0);
+        int idFra2 = getIntent().getIntExtra(Fragment2.ID_FRA_2, 0);
 
         //jika id nya 1 maka proses yang dijalankan
         if (idFra == 1) {
             //mendapatkan intent dari Main Activity dengan Constanta LINK_1
             DataAdapter data = (DataAdapter) getIntent().getSerializableExtra(Fragment1.LINK_FRA_1);
             setTitle(data.getTitle());
-        } else if (id == 2) {
+        } else if (idFra2 == 2) {
             //mendapatkan intent dari Main Activity dengan Constanta LINK_1
-            Data data = (Data) getIntent().getSerializableExtra(MainActivity.LINK_2);
-            setTitle(data.text1);
+            DataAdapter data = (DataAdapter) getIntent().getSerializableExtra(Fragment2.LINK_FRA_2);
+            setTitle(data.getTitle());
         } else if (idTulang == 3) {
             //mendapatkan intent dari Main Activity dengan Constanta LINK_1
             Data data = (Data) getIntent().getSerializableExtra(TulangActivity.LINK_TULANG);

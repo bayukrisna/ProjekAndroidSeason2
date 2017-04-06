@@ -26,6 +26,7 @@ public class FragmentView3 extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         int idFra = getActivity().getIntent().getIntExtra(Fragment1.ID_FRA_1, 0);
+        int idFra2 = getActivity().getIntent().getIntExtra(Fragment2.ID_FRA_2, 0);
         TextView tvCure;
 
         //jika id nya 1 maka proses yang dijalankan
@@ -35,7 +36,11 @@ public class FragmentView3 extends Fragment {
             tvCure = (TextView) getView().findViewById(R.id.textViewCure);
             tvCure.setText(data.getCure());
         }
-
+        if (idFra2 == 2) {
+            DataAdapter data = (DataAdapter) getActivity().getIntent().getSerializableExtra(Fragment2.LINK_FRA_2);
+            tvCure = (TextView) getView().findViewById(R.id.textViewCure);
+            tvCure.setText(data.getCure());
+        }
     }
 
     @Override

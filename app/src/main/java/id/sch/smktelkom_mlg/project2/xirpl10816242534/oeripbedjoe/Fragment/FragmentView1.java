@@ -39,6 +39,7 @@ public class FragmentView1 extends Fragment {
 
         int id = getActivity().getIntent().getIntExtra(MainActivity.ID, 0);
         int idFra = getActivity().getIntent().getIntExtra(Fragment1.ID_FRA_1, 0);
+        int idFra2 = getActivity().getIntent().getIntExtra(Fragment2.ID_FRA_2, 0);
         TextView tvDescription;
 
         //jika id nya 1 maka proses yang dijalankan
@@ -49,20 +50,10 @@ public class FragmentView1 extends Fragment {
             tvDescription.setText(data.getDesc());
         }
 
-        if (id == 1) {
-            /*//mendapatkan intent dari Main Activity dengan Constanta LINK_1
-            Data data = (Data) getActivity().getIntent().getSerializableExtra(MainActivity.LINK_1);
-            ImageView iv1 = (ImageView) getActivity().findViewById(R.id.imageView1F1);
-            TextView tv1 = (TextView) getActivity().findViewById(R.id.textView1F1);
-            TextView tv2 = (TextView) getActivity().findViewById(R.id.textView2F1);
-            ImageView iv2 = (ImageView) getActivity().findViewById(R.id.imageView2F1);
-            TextView tv3 = (TextView) getActivity().findViewById(R.id.textView3F1);
-            //merubah data
-            iv1.setImageResource(data.img1);
-            tv1.setText(data.text1);
-            tv2.setText(data.text2);
-            iv2.setImageResource(data.img2);
-            tv3.setText(data.text3);*/
+        if (idFra2 == 2) {
+            DataAdapter data = (DataAdapter) getActivity().getIntent().getSerializableExtra(Fragment2.LINK_FRA_2);
+            tvDescription = (TextView) getView().findViewById(R.id.textViewDescription);
+            tvDescription.setText(data.getDesc());
         }
     }
 }
