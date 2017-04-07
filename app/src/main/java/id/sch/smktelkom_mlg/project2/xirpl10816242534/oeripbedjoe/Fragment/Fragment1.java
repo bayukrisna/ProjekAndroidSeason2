@@ -107,6 +107,7 @@ public class Fragment1 extends Fragment {
 
         mRecycler.setHasFixedSize(true);
         mRecycler.setLayoutManager(new LinearLayoutManager(this.getActivity()));
+        LinearLayoutManager mLayoutManager = (LinearLayoutManager) mRecycler.getLayoutManager();
         mAdapter = new FirebaseRecyclerAdapter<DataAdapter, RingantHolder>(DataAdapter.class, R.layout.fragment1list, RingantHolder.class, mRef) {
             @Override
             public void populateViewHolder(RingantHolder ringanViewHolder, DataAdapter data, int position) {
@@ -130,7 +131,9 @@ public class Fragment1 extends Fragment {
                 return viewHolder;
             }
         };
+        mLayoutManager.scrollToPosition(0);
         mRecycler.setAdapter(mAdapter);
+
     }
 
     //Memberi Nama Tab
