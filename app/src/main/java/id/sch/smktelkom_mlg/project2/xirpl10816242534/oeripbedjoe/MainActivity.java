@@ -5,6 +5,8 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
+import com.google.firebase.database.FirebaseDatabase;
+
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.Fragment1;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.Fragment2;
 import id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe.Fragment.Fragment3;
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String LINK_3 = "link3";
     public static final String LINK_4 = "link4";
     public static final String ID = "id";
+    static boolean calledAlready = false;
 
 
     @Override
@@ -42,6 +45,11 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.getTabAt(2).setIcon(R.drawable.tulangicon);
         tabLayout.getTabAt(3).setIcon(R.drawable.kalori);
         tabLayout.setOnTabSelectedListener(listener(vp));
+
+        if (!calledAlready) {
+            FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+            calledAlready = true;
+        }
 
     }
 
