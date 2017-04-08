@@ -104,6 +104,7 @@ public class Fragment2 extends Fragment {
 
         mRecycler.setHasFixedSize(true);
         mRecycler.setLayoutManager(new LinearLayoutManager(this.getActivity()));
+        LinearLayoutManager mLayoutManager = (LinearLayoutManager) mRecycler.getLayoutManager();
         mAdapter = new FirebaseRecyclerAdapter<DataAdapter, BeratHolder>(DataAdapter.class, R.layout.fragment2list, BeratHolder.class, mRef) {
             @Override
             protected void populateViewHolder(BeratHolder beratViewHolder, DataAdapter data, int position) {
@@ -127,6 +128,7 @@ public class Fragment2 extends Fragment {
                 return viewHolder;
             }
         };
+        mRecycler.setAdapter(mAdapter);
         mRecycler.setAdapter(mAdapter);
     }
 
