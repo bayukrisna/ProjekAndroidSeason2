@@ -128,7 +128,7 @@ public class Fragment2 extends Fragment {
                 return viewHolder;
             }
         };
-        mRecycler.setAdapter(mAdapter);
+        mLayoutManager.scrollToPosition(0);
         mRecycler.setAdapter(mAdapter);
     }
 
