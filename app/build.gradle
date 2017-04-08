@@ -7,15 +7,15 @@ android {
         applicationId "id.sch.smktelkom_mlg.project2.xirpl10816242534.oeripbedjoe"
         minSdkVersion 16
         targetSdkVersion 24
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "3.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     signingConfigs {
         release {
-            storeFile file("../keyproject/keyandroidseasondua.jks")
+            storeFile file("../keyproject/key.jks")
             storePassword "huwahuwa"
-            keyAlias "OB"
+            keyAlias "OeripBejo"
             keyPassword "huwahuwa"
         }
     }
