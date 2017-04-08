@@ -33,20 +33,19 @@
             android:layout_marginTop="8dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
             tools:text="Judul" />
 
         <TextView
             android:id="@+id/textViewFrag12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:layout_alignLeft="@+id/textViewFrag11"
             android:layout_alignStart="@+id/textViewFrag11"
             android:layout_below="@+id/textViewFrag11"
             android:ellipsize="end"
             android:maxLines="2"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             tools:text="Deskripsi" />
 
     </RelativeLayout>
