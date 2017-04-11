@@ -38,8 +38,8 @@ Cek Ideal Tubuh <br>
 ![4.png](https://s30.postimg.org/8im9dvecx/ideal.png) <br>
 
 ### D. Video Aplikasi
-<a href="https://www.youtube.com/watch?v=o8r4mWaPamQ&feature=youtu.be
-" target="_blank"><img src="https://s12.postimg.org/5dxod8k31/hmm.png"
+<a href="https://www.youtube.com/watch?v=2XLwQgsynxw
+" target="_blank"><img src="https://s24.postimg.org/ajk2969hx/taek.png"
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
 ### E. Identitas Masing - Masing Anggota
