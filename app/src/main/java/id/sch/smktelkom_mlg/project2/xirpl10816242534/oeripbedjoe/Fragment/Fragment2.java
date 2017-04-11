@@ -36,7 +36,7 @@ public class Fragment2 extends Fragment {
     public static final String LINK_FRA_2 = "link_fra_2";
     public static final String ID_FRA_2 = "id_fra_2";
     FirebaseRecyclerAdapter mAdapter;
-    AdapterFragment2 mIDataAdapterFrag2;
+    private AdapterFragment2 mAdapterFragment2;
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference mMessagesDatabaseReference;
     private ChildEventListener mChildEventListener;
@@ -61,7 +61,7 @@ public class Fragment2 extends Fragment {
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mMessagesDatabaseReference = mFirebaseDatabase.getReference().child("berat");
         final RecyclerView mRecycler = (RecyclerView) getView().findViewById(R.id.mRecyclerFrag1);
-        DatabaseReference mRef = FirebaseDatabase.getInstance().getReference().child("berat");
+        DatabaseReference mRef2 = FirebaseDatabase.getInstance().getReference().child("berat");
 
         mChildEventListener = new ChildEventListener() {
             @Override
@@ -100,12 +100,12 @@ public class Fragment2 extends Fragment {
 
             }
         };
-        mRef.addChildEventListener(mChildEventListener);
+        mRef2.addChildEventListener(mChildEventListener);
 
         mRecycler.setHasFixedSize(true);
         mRecycler.setLayoutManager(new LinearLayoutManager(this.getActivity()));
         LinearLayoutManager mLayoutManager = (LinearLayoutManager) mRecycler.getLayoutManager();
-        mAdapter = new FirebaseRecyclerAdapter<DataAdapter, BeratHolder>(DataAdapter.class, R.layout.fragment2list, BeratHolder.class, mRef) {
+        mAdapter = new FirebaseRecyclerAdapter<DataAdapter, BeratHolder>(DataAdapter.class, R.layout.fragment2list, BeratHolder.class, mRef2) {
             @Override
             protected void populateViewHolder(BeratHolder beratViewHolder, DataAdapter data, int position) {
                 beratViewHolder.setName(data.getTitle());

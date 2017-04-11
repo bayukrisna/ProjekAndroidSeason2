@@ -157,7 +157,6 @@ public class Fragment1 extends Fragment {
                 @Override
                 public void onClick(View v) {
                     mClickListener.onItemClick(v, getAdapterPosition());
-
                 }
             });
         }
