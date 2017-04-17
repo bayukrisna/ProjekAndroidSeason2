@@ -60,7 +60,7 @@ public class Fragment2 extends Fragment {
         super.onActivityCreated(savedInstanceState);
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mMessagesDatabaseReference = mFirebaseDatabase.getReference().child("berat");
-        final RecyclerView mRecycler = (RecyclerView) getView().findViewById(R.id.mRecyclerFrag1);
+        final RecyclerView mRecycler = (RecyclerView) getView().findViewById(R.id.mRecyclerFrag2);
         DatabaseReference mRef2 = FirebaseDatabase.getInstance().getReference().child("berat");
 
         mChildEventListener = new ChildEventListener() {
@@ -107,7 +107,7 @@ public class Fragment2 extends Fragment {
         LinearLayoutManager mLayoutManager = (LinearLayoutManager) mRecycler.getLayoutManager();
         mAdapter = new FirebaseRecyclerAdapter<DataAdapter, BeratHolder>(DataAdapter.class, R.layout.fragment2list, BeratHolder.class, mRef2) {
             @Override
-            protected void populateViewHolder(BeratHolder beratViewHolder, DataAdapter data, int position) {
+            public void populateViewHolder(BeratHolder beratViewHolder, DataAdapter data, int position) {
                 beratViewHolder.setName(data.getTitle());
                 beratViewHolder.setText(data.getDesc());
                 beratViewHolder.setAbjad(data.getTitle().substring(0, 1));
@@ -138,11 +138,11 @@ public class Fragment2 extends Fragment {
         return "Fragment 2";
     }
 
-    private static class BeratHolder extends RecyclerView.ViewHolder {
-        TextView tvFrag12;
-        TextView tvFrag11;
-        TextView tvTitle;
-        private BeratHolder.ClickListener mClickListener;
+    public static class BeratHolder extends RecyclerView.ViewHolder {
+        public TextView tvFrag12;
+        public TextView tvFrag11;
+        public TextView tvTitle;
+        public BeratHolder.ClickListener mClickListener;
 
         public BeratHolder(View itemView) {
             super(itemView);
@@ -177,6 +177,5 @@ public class Fragment2 extends Fragment {
         public interface ClickListener {
             void onItemClick(View view, int position);
         }
-
     }
 }

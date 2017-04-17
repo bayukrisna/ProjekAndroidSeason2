@@ -142,10 +142,10 @@ public class Fragment1 extends Fragment {
     }
 
     public static class RingantHolder extends RecyclerView.ViewHolder {
+        public RingantHolder.ClickListener mClickListener;
         TextView tvFrag12;
         TextView tvFrag11;
         TextView tvTitle;
-        private RingantHolder.ClickListener mClickListener;
 
         public RingantHolder(View itemView) {
             super(itemView);
