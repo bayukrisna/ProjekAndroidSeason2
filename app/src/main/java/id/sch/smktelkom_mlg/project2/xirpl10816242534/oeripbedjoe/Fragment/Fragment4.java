@@ -34,6 +34,7 @@ public class Fragment4 extends Fragment {
     TextView jenkel;
     RadioGroup radiogrup;
 
+
     int ti, bt, hi;
     String temp = "";
 
